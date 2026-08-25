@@ -1,0 +1,87 @@
+.accordion-container
+{
+    .accordion-wrapper
+    {
+        .accordion
+        {
+            .accordian
+            {
+                padding: 0px 7% 0px 10%;
+                .accordian-headline
+                {
+                    color: #032d60;
+                    font-size: 32px;
+                    line-height: 40px;
+                    font-weight: bold;
+                    text-align: center;
+                    margin-bottom: 35px;
+                    font-family: 'roboto', sans-serif;
+                }
+                .accordian-heading
+                {
+                    position: relative;
+                    color:#032d60;
+                     cursor: pointer;
+                    font-size: 22px;
+                    font-family: 'roboto', sans-serif;
+                    border-bottom: 1.5px solid #ebebeb;
+                    padding: 20px 80px 25px 0px;
+                    &::after {
+                        content: "+";
+                        position: absolute;
+                        top: 20px;
+                        right: 45px;
+                        width: 25px;
+                        height: 25px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 50%;
+                        background: #d4e8fa;
+                        color: #032d60;
+                        font-size: 24px;
+                        font-weight: normal;
+                    }
+                    &:hover{
+                        color: #0176d3;
+                        &::after {
+                            background: #0176d3;
+                            color: #fff;
+                        }
+                    }
+                }
+                .accordian-description
+                {
+                    font-size:16px;
+                    padding: 0px 80px 25px 0px;
+                    line-height: 25px;
+                    border-bottom: 1.5px solid #ebebeb;
+                    display: none;
+                    a
+                    {
+                        color: #0b5cab;
+                    }
+                }
+                
+            }
+            .active
+            {
+                .accordian-description
+                {
+                    display: block;
+                }
+                .accordian-heading
+                {
+                    border: 0px;
+                    &::after {
+                        content: "-";
+                        position: absolute;
+                        font-size: 40px;
+                        font-weight: normal;
+                    }
+                }
+            }
+        }
+    }
+}
+
