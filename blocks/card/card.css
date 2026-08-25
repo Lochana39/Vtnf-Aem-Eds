@@ -2,12 +2,14 @@
   display: flex;
   gap: 25px;
 }
+
 .card-container .card-wrapper .card .customcard {
   position: relative;
   border-radius: 7px;
   box-shadow: 0 0 14px 0 #bcb9b9;
   padding: 10px 20px 35px;
 }
+
 .card-container .card-wrapper .card .customcard::after {
   content: "";
   position: absolute;
@@ -18,9 +20,11 @@
   background: #e53935;
   transition: width 0.5s ease;
 }
+
 .card-container .card-wrapper .card .customcard:hover::after {
   width: 100%;
 }
+
 .card-container .card-wrapper .card .customcard-number {
   position: absolute;
   top: 10px;
@@ -30,21 +34,25 @@
   font-weight: bold;
   color: red;
 }
+
 .card-container .card-wrapper .card .customcard-image picture {
   display: flex;
   justify-content: center;
   margin-bottom: 30px;
 }
+
 .card-container .card-wrapper .card .customcard-image picture img {
   width: 27%;
   height: 62px;
   margin-top: 20px;
 }
+
 .card-container .card-wrapper .card .customcard-title {
   font-size: 23px;
   font-weight: bold;
   text-align: center;
 }
+
 .card-container .card-wrapper .card .customcard-description {
   font-size: 18px;
   color: #8c8c8c;
