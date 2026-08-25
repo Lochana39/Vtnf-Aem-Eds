@@ -1,8 +1,29 @@
+.top {
+    >div
+    {
+        flex-direction: row;
+    }
+}
+.right {
+    >div
+    {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+}
+.bottom {
+    >div
+    {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
+
 .teaser-container
 {
     .teaser-wrapper
     {
-        margin: 0px;
+        margin: 0;
         .teaser
         {
             >div
@@ -20,15 +41,15 @@
         width: 550px;
     }
     h2 {
-        margin: 0px;
+        margin: 0;
         color: #202124;
         font-size: 39px;
         line-height: 42px;
-        font-family: 'roboto', sans-serif;
+        font-family: roboto, sans-serif;
     }
     ul {
-        margin: 0px;
-        padding: 30px 0px 0px 10px;
+        margin: 0;
+        padding: 30px 0 0 10px;
         list-style: none;
         li {
             position: relative;
@@ -56,7 +77,7 @@
     }
     p {
         align-items: center;
-        margin: 50px 0px 0px 0px;
+        margin: 50px 0 0;
         a:first-child {
             padding: 15px 40px;
             border-radius: 5px;
@@ -79,26 +100,3 @@
     }
 }
     
-.top{
-    >div
-    {
-
-        flex-direction: row;   
-    }
-    
-}
-.right{
-   >div
-    {
-        display: flex;
-        flex-direction: row-reverse;  
-    }
-}
-.bottom{
-    >div
-    {
-        display: flex;
-        flex-direction: column-reverse;  
-    }  
-}
-
