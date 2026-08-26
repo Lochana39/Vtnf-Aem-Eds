@@ -7,7 +7,7 @@
             .accordian
             {
                 padding: 0px 7% 0px 10%;
-                .accordian-headline
+                &-headline
                 {
                     color: #032d60;
                     font-size: 32px;
@@ -17,7 +17,7 @@
                     margin-bottom: 35px;
                     font-family: 'roboto', sans-serif;
                 }
-                .accordian-heading
+                &-heading
                 {
                     position: relative;
                     color:#032d60;
@@ -50,7 +50,7 @@
                         }
                     }
                 }
-                .accordian-description
+                &-description
                 {
                     font-size:16px;
                     padding: 0px 80px 25px 0px;
