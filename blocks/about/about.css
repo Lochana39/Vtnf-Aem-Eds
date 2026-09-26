@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "Livvic";
+  font-family: Livvic;
   src: url("../../fonts/Livvic-Bold.woff2") format("woff2");
   font-weight: bold;
   font-style: normal;
@@ -7,7 +7,7 @@
 }
 
 @font-face {
-  font-family: "Livvic";
+  font-family: Livvic;
   src: url("../../fonts/Livvic-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
@@ -15,7 +15,7 @@
 }
 
 @font-face {
-  font-family: "Livvic";
+  font-family: Livvic;
   src: url("../../fonts/Livvic-Regular.woff2") format("woff2");
   font-weight: 600;
   font-style: normal;
@@ -23,13 +23,13 @@
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
-  font-family: "Livvic", sans-serif !important;
+  font-family: Livvic, sans-serif !important;
 }
 
 .about-container .about-wrapper {
   max-width: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 
 .about-container .about-wrapper .about {
@@ -37,12 +37,12 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   overflow: hidden;
   color: #fff;
   text-align: center;
-  padding: 60px 0px;
+  padding: 60px 0;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (width >= 320px) and (width <= 767px) {
   .about-container .about-wrapper .about {
-    padding: 20px 0px;
+    padding: 20px 0;
   }
 }
 
@@ -54,7 +54,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 
 .about-container .about-wrapper .about-hero-bg .about-hero-img {
   width: 100%;
-  -o-object-fit: cover;
      object-fit: cover;
   height: 100%;
 }
@@ -63,9 +62,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   margin: 0 auto 40px;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (width >= 320px) and (width <= 767px) {
   .about-container .about-wrapper .about-content {
-    margin: 0px 0px 10px 0px;
+    margin: 0 0 10px;
   }
 }
 
@@ -84,9 +83,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   margin-bottom: 32px;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (width >= 320px) and (width <= 767px) {
   .about-container .about-wrapper .about-title {
-    margin: 0px 0px 20px 0px;
+    margin: 0 0 20px;
     font-size: 27px;
     line-height: 35px;
   }
@@ -99,7 +98,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   gap: 16px;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (width >= 320px) and (width <= 767px) {
   .about-container .about-wrapper .about-buttons {
     gap: 8px;
   }
@@ -117,14 +116,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   transition: background 0.2s ease, color 0.2s ease;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (width >= 320px) and (width <= 767px) {
   .about-container .about-wrapper .about-tab-btn {
     padding: 10px 16px;
   }
 }
 
 .about-container .about-wrapper .about-tab-btn:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgb(255 255 255 / 15%);
 }
 
 .about-container .about-wrapper .about-tab-btn.is-active {
@@ -137,30 +136,30 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .about-container .about-wrapper .about .about-panel-media {
-  padding: 5px 0px 0px 10%;
+  padding: 5px 0 0 10%;
   width: 76%;
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (width >= 768px) and (width <= 1024px) {
   .about-container .about-wrapper .about .about-panel-media {
-    padding: 5px 0px 0px 6%;
+    padding: 5px 0 0 6%;
     width: 100%;
   }
 }
 
 .about-container .about-wrapper .about .about-panel-text {
-  padding: 0px 10% 0px 0px;
+  padding: 0 10% 0 0;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (width >= 320px) and (width <= 767px) {
   .about-container .about-wrapper .about .about-panel-text {
-    padding: 0px 30px;
+    padding: 0 30px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (width >= 768px) and (width <= 1024px) {
   .about-container .about-wrapper .about .about-panel-text {
-    padding: 0px 35px 0px 0px;
+    padding: 0 35px 0 0;
   }
 }
 
@@ -174,17 +173,16 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   gap: 20px;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (width >= 320px) and (width <= 767px) {
   .about-container .about-wrapper .about .about-gallery-item {
     flex-direction: column;
-    padding: 0px 30px;
+    padding: 0 30px;
   }
 }
 
 .about-container .about-wrapper .about .about-gallery-img {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
      object-fit: cover;
   display: block;
 }
@@ -195,14 +193,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   text-align: left;
 }
 
-@media (min-width: 320px) and (max-width: 767px) {
+@media (width >= 320px) and (width <= 767px) {
   .about-container .about-wrapper .about .about-panel-content.is-active {
     flex-direction: column;
     gap: 15px;
   }
 }
 
-@media (min-width: 768px) and (max-width: 1024px) {
+@media (width >= 768px) and (width <= 1024px) {
   .about-container .about-wrapper .about .about-panel-content.is-active {
     gap: 20px;
   }
