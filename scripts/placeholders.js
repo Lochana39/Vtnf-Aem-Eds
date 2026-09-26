@@ -15,7 +15,7 @@
  * Supports both the common AEM placeholder JSON shape and a flat object map.
  * @returns {Promise<Record<string, string>>}
  */
-export async function fetchPlaceholders() {
+export default async function fetchPlaceholders() {
   const cacheKey = 'placeholders';
   window[cacheKey] = window[cacheKey] || {};
 
