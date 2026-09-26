@@ -1,0 +1,221 @@
+@font-face {
+  font-family: "Livvic";
+  src: url("../../fonts/Livvic-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Livvic";
+  src: url("../../fonts/Livvic-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Livvic";
+  src: url("../../fonts/Livvic-Regular.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
+  font-family: "Livvic", sans-serif !important;
+}
+
+.about-container .about-wrapper {
+  max-width: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.about-container .about-wrapper .about {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  text-align: center;
+  padding: 60px 0px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .about-container .about-wrapper .about {
+    padding: 20px 0px;
+  }
+}
+
+.about-container .about-wrapper .about-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.about-container .about-wrapper .about-hero-bg .about-hero-img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+
+.about-container .about-wrapper .about-content {
+  margin: 0 auto 40px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .about-container .about-wrapper .about-content {
+    margin: 0px 0px 10px 0px;
+  }
+}
+
+.about-container .about-wrapper .about-pretitle {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+}
+
+.about-container .about-wrapper .about-title {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .about-container .about-wrapper .about-title {
+    margin: 0px 0px 20px 0px;
+    font-size: 27px;
+    line-height: 35px;
+  }
+}
+
+.about-container .about-wrapper .about-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .about-container .about-wrapper .about-buttons {
+    gap: 8px;
+  }
+}
+
+.about-container .about-wrapper .about-tab-btn {
+  padding: 12px 28px;
+  border: 1px solid #fff;
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .about-container .about-wrapper .about-tab-btn {
+    padding: 10px 16px;
+  }
+}
+
+.about-container .about-wrapper .about-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.about-container .about-wrapper .about-tab-btn.is-active {
+  background: #fff;
+  color: #14b0bc;
+}
+
+.about-container .about-wrapper .about-panel {
+  display: none;
+}
+
+.about-container .about-wrapper .about .about-panel-media {
+  padding: 5px 0px 0px 10%;
+  width: 76%;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-container .about-wrapper .about .about-panel-media {
+    padding: 5px 0px 0px 6%;
+    width: 100%;
+  }
+}
+
+.about-container .about-wrapper .about .about-panel-text {
+  padding: 0px 10% 0px 0px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .about-container .about-wrapper .about .about-panel-text {
+    padding: 0px 30px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-container .about-wrapper .about .about-panel-text {
+    padding: 0px 35px 0px 0px;
+  }
+}
+
+.about-container .about-wrapper .about .about-panel.is-active {
+  display: block;
+}
+
+.about-container .about-wrapper .about .about-gallery-item {
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .about-container .about-wrapper .about .about-gallery-item {
+    flex-direction: column;
+    padding: 0px 30px;
+  }
+}
+
+.about-container .about-wrapper .about .about-gallery-img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+}
+
+.about-container .about-wrapper .about .about-panel-content.is-active {
+  display: flex;
+  gap: 40px;
+  text-align: left;
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .about-container .about-wrapper .about .about-panel-content.is-active {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-container .about-wrapper .about .about-panel-content.is-active {
+    gap: 20px;
+  }
+}
+
+.about-container .about-wrapper .about .about-panel-img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+.about-container .about-wrapper .about .about-panel-paragraph {
+  margin-bottom: 20px;
+  line-height: 1.7;
+  font-size: 16px;
+}/*# sourceMappingURL=about.css.map */

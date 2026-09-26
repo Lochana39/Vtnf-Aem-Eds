@@ -1,0 +1,162 @@
+@import '../designsystem/variable.scss';
+.about-container{
+  .about-wrapper{
+      max-width: none;
+      margin: 0px;
+      padding: 0px;
+      .about {
+        position: relative;
+        overflow: hidden;
+        color: $white;
+        text-align: center;
+        padding: 60px 0px;
+        @media (min-width: 320px) and (max-width: 767px)
+        {
+            padding: 20px 0px;
+        }
+        &-hero-bg {
+          position: absolute;
+          inset: 0;
+          z-index: -2;
+          .about-hero-img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+          }
+          // &::after {
+          //   content: '';
+          //   position: absolute;
+          //   inset: 0;
+          //   z-index: -1;
+          // }
+        }
+        &-content {
+          margin: 0 auto 40px;
+          @media (min-width: 320px) and (max-width: 767px)
+          {
+            margin:0px 0px 10px 0px;
+          }
+        }
+
+        &-pretitle {
+          font-size: $font - 1px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          margin-bottom: 12px;
+        }
+        &-title {
+          font-size: $font + 25px;
+          font-weight: 700;
+          line-height: 1.25;
+          margin-bottom: 32px;
+          @media (min-width: 320px) and (max-width: 767px)
+          {
+              margin: 0px 0px 20px 0px;
+              font-size: 27px;
+              line-height: 35px;
+          }
+        }
+        &-buttons {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 16px;
+          @media (min-width: 320px) and (max-width: 767px)
+          {
+            gap:8px;
+          }
+        }
+        &-tab-btn {
+          padding: 12px 28px;
+          border: 1px solid $white;
+          background: transparent;
+          color: $white;
+          font-weight: 600;
+          font-size: 15px;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: background .2s ease, color .2s ease;
+          @media (min-width: 320px) and (max-width: 767px)
+          {
+            padding: 10px 16px;
+          }
+          &:hover {
+            background: rgba(255, 255, 255, .15);
+          }
+          &.is-active {
+            background: $white;
+            color: $bluecol;
+          }
+        }
+        &-panel {
+          display: none;
+        }
+        .about-panel-media
+        {
+          padding: 5px 0px 0px 10%;
+          width: 76%;
+          @media (min-width: 768px) and (max-width: 1024px)
+          {
+            padding: 5px 0px 0px 6%;
+            width: 100%;
+          }
+        }
+        .about-panel-text
+        {
+          padding: 0px 10% 0px 0px;
+          @media (min-width: 320px) and (max-width: 767px)
+          {
+            padding: 0px 30px;
+          }
+          @media (min-width: 768px) and (max-width: 1024px)
+          {
+            padding: 0px 35px 0px 0px;
+          }
+        }
+        .about-panel.is-active {
+          display: block;
+        }
+        .about-gallery-item {
+          margin: 0;
+          display: flex;
+          gap:20px;
+          @media (min-width: 320px) and (max-width: 767px)
+          {
+            flex-direction: column;
+            padding: 0px 30px;
+          }
+        }
+        .about-gallery-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+        .about-panel-content.is-active {
+          display:flex;
+          gap: 40px;
+          text-align: left;
+          @media (min-width: 320px) and (max-width: 767px)
+          {
+            flex-direction: column;
+            gap:15px;
+          }
+          @media (min-width: 768px) and (max-width: 1024px)
+          {
+            gap:20px;
+          }
+        }
+        .about-panel-img {
+          width: 100%;
+          border-radius: 4px;
+          display: block;
+        }
+        .about-panel-paragraph {
+          margin-bottom: 20px;
+          line-height: 1.7;
+          font-size: $font + 1px;
+        }
+      }
+  }
+}

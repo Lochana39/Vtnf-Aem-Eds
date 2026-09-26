@@ -1,0 +1,113 @@
+@import '../designsystem/variable.scss';
+.testimonal-container{
+    .testimonal-wrapper{
+        margin: 0px;
+        padding: 20px 35px;
+        background-color: #f9f9f9;
+        @media (min-width: 320px) and (max-width: 767px)
+        {
+        padding: 15px 20px ;
+        }
+        .testimonal{
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            .testimonal-slide
+            {
+                display: flex;
+                flex: 0 0 100%;
+                width: 100%;
+                padding: 0px 45px;
+                gap: 35px;
+                box-sizing: border-box;
+                @media (min-width: 320px) and (max-width: 767px)
+                {
+                flex-direction: column;
+                gap: 5px;
+                padding: 0px;
+                }
+                .testimonal-slide-description
+                {
+                    box-shadow: #dfdfdf 0px 4px 20px 0px;
+                    padding: 50px 35px;
+                    margin-bottom: 0px;
+                    @media (min-width: 320px) and (max-width: 767px)
+                    {
+                    padding: 25px 20px;
+                    }
+                }
+            }
+            p:nth-of-type(2)
+            {
+                margin-top:0px;
+
+                img
+                {
+                    width:50px;
+                    @media (min-width: 320px) and (max-width: 767px)
+                    {
+                    width: 45px;
+                    height: 25px;
+                    }
+                }
+            }
+            .testimonal-card,.testimonal-content
+            {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .testimonal-card
+            {
+                text-align: center;
+            }
+            .testimonal-track {
+                display: flex;
+                width: 100%;
+                transition: transform 0.5s ease;
+            }
+            .prev-btn,.next-btn
+            {
+                position: absolute;
+                top: 40%;
+                color: #14b0bc;
+                border:1px solid #14b0bc;
+                font-size: 35px;
+                font-weight: bold;
+                padding: 0px 20px;
+                cursor: pointer;
+                background: transparent;
+            }
+            .prev-btn
+            {
+                left: 0;
+            }
+            .next-btn
+            {
+                right: 0;
+                @media (min-width: 320px) and (max-width: 767px)
+                {
+                font-size: 25px;
+                padding: 0px 15px
+                }
+            }
+            .dots
+            {
+                text-align: center;
+                .dot
+                {
+                    padding: 0px;
+                    margin: 40px 5px;
+                    border: 1px solid #14b0bc;
+                    border-radius: 50%;
+                    height: 15px;
+                    width: 15px;
+                    background: #fff;
+                }
+                .dot.active
+                {
+                    background: #14b0bc;
+                }
+            }
+        }
+    }
+}

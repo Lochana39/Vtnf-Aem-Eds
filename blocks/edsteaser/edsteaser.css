@@ -1,0 +1,259 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Livvic";
+  src: url("../../fonts/Livvic-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../../fonts/Livvic-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Livvic";
+  src: url("../../fonts/Livvic-Regular.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
+  font-family: "Livvic", sans-serif !important;
+}
+
+.edsteaser-container .edsteaser-wrapper {
+  max-width: none;
+  margin: 0px;
+  padding: 0px;
+}
+.edsteaser-container .edsteaser-wrapper .edsteaser-custom {
+  display: flex;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .edsteaser-container .edsteaser-wrapper .edsteaser-custom {
+    flex-direction: column;
+    padding: 0px 20px !important;
+    gap: 15px !important;
+  }
+}
+.edsteaser-container .edsteaser-wrapper .edsteaser-custom-img {
+  width: 100%;
+}
+.edsteaser-container .edsteaser-wrapper .edsteaser-custom-pretitle {
+  color: #14b0bc;
+}
+.edsteaser-container .edsteaser-wrapper .edsteaser-custom-content {
+  width: 100%;
+  padding: 0px 30px 0px 30px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .edsteaser-container .edsteaser-wrapper .edsteaser-custom-content {
+    padding: 0px;
+  }
+}
+.edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn {
+  background: #14b0bc;
+  color: #fff;
+  margin-right: 15px;
+  font-weight: bold;
+  padding: 15px 35px;
+  border-radius: 50px;
+  display: inline-block;
+}
+.edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn a {
+  color: #fff;
+  font-size: 17px;
+  text-transform: capitalize;
+  text-decoration: none;
+}
+.edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn:hover {
+  color: #fff;
+  background-color: #030826;
+}
+.edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn:active, .edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn:focus {
+  outline: 0;
+}
+.edsteaser-container .edsteaser-wrapper .edsteaser-custom-description {
+  line-height: 25px;
+  color: #929292;
+  font-size: 17px;
+}
+
+.stratergy {
+  padding: 40px 60px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .stratergy {
+    padding: 0px 25px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1020px) {
+  .stratergy {
+    padding: 30px 25px;
+  }
+}
+.stratergy .edsteaser-custom {
+  padding: 40px 40px;
+  border: 1px solid #dfdddd;
+}
+@media (min-width: 768px) and (max-width: 1020px) {
+  .stratergy .edsteaser-custom {
+    padding: 20px 20px 20px 0px;
+  }
+}
+.stratergy .edsteaser-custom-ul {
+  list-style: none;
+  line-height: 25px;
+  color: #929292;
+  font-size: 17px;
+  display: unset !important;
+}
+.stratergy .edsteaser-custom-ul li {
+  width: 100% !important;
+  position: relative;
+  padding: 0px 0px 0px 35px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .stratergy .edsteaser-custom-ul li {
+    padding: 0px 0px 0px 17px;
+  }
+}
+.stratergy .edsteaser-custom-ul li:before {
+  content: "✓";
+  position: absolute;
+  left: 0px !important;
+  color: #14b0bc !important;
+  background-color: transparent !important;
+}
+
+.member .edscard-custom-carddiv {
+  padding: 0px 20px 30px 20px;
+  gap: 50px !important;
+}
+.member .edscard-custom-carddiv .edstitlecard-custom {
+  background: #fff;
+  padding: 0px !important;
+}
+.member .edscard-custom-titlediv .edstitlecard-custom-pretitle, .member .edscard-custom-titlediv .edstitlecard-custom-title, .member .edscard-custom-titlediv .edstitlecard-custom-titledescription {
+  color: #fff;
+}
+
+.purchase .edsteaser-custom-ul {
+  list-style: none;
+  padding: 15px 0px 0px 35px;
+  line-height: 25px;
+  color: #929292;
+  font-size: 17px;
+  display: flex;
+  flex-wrap: wrap;
+  -moz-column-gap: 90px;
+       column-gap: 90px;
+  row-gap: 20px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .purchase .edsteaser-custom-ul {
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) and (max-width: 1020px) {
+  .purchase .edsteaser-custom-ul {
+    gap: 40px;
+  }
+}
+.purchase .edsteaser-custom-ul li {
+  width: 40%;
+  position: relative;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .purchase .edsteaser-custom-ul li {
+    width: 100%;
+  }
+}
+.purchase .edsteaser-custom-ul li:before {
+  content: "✓";
+  position: absolute;
+  left: -32px;
+  top: 0px;
+  width: 22px;
+  font-size: 15px;
+  color: #fff;
+  font-weight: bold;
+  height: 22px;
+  border-radius: 50%;
+  background-color: #14b0bc;
+  text-align: center;
+}
+
+.solution .edsteaser-custom-img img {
+  width: 100%;
+  -o-object-position: top right;
+     object-position: top right;
+  height: 600px;
+  -o-object-fit: none;
+     object-fit: none;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .solution .edsteaser-custom-img img {
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: auto;
+  }
+}
+.solution .edsteaser-custom .edsteaser-custom-content {
+  width: 75%;
+  padding: 25px 70px 0px 35px;
+}
+@media (min-width: 320px) and (max-width: 767px) {
+  .solution .edsteaser-custom .edsteaser-custom-content {
+    padding: 0px 30px;
+  }
+}
+.solution .edsteaser-custom-title {
+  margin: 25px 0px 15px 0px;
+  padding: 0px;
+}
+.solution .edsteaser-custom-description {
+  margin: 0px 0px 25px 0px;
+}
+.solution .edsteaser-custom .edsteaser-progress {
+  margin-top: 19px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.solution .edsteaser-custom .edsteaser-progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-weight: 700;
+  font-size: 16px;
+}
+.solution .edsteaser-custom .edsteaser-progress-track {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  background-color: #dfdddd;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.solution .edsteaser-custom .edsteaser-progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #14b0bc;
+  border-radius: 4px;
+  transition: width 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+.solution .edsteaser-custom .edsteaser-progress-value {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  transform: translateX(-50%);
+  margin-bottom: 4px;
+  font-weight: 700;
+  font-size: 14px;
+  white-space: nowrap;
+}/*# sourceMappingURL=edsteaser.css.map */

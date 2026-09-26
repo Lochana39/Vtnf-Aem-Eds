@@ -1,0 +1,411 @@
+@import '../designsystem/variable.scss';
+.edscard-container{
+  margin: 0px !important;
+  .default-content-wrapper
+  {
+    text-align:center;
+    .pretitle
+    {
+      color: $bluecol;
+      font-size: $font + 2px;
+    }
+    .title
+    {
+      line-height:50px;
+      font-size: $font + 20px;
+      padding:10px 0px 15px 0px;
+      margin: 0px;
+      color: $btnhover;
+      @media (min-width: 320px) and (max-width: 767px)
+      {
+        font-size: $font + 12px;
+        line-height: 35px;
+      }
+    }
+    .description
+    {
+      line-height: 25px;
+      color: $des;
+      font-size: $font + 2px;
+    }
+  }
+  .edscard-wrapper{
+    padding: 0px;
+    .edscard {
+      display: flex;
+      padding: 0px 55px 45px 55px;
+      gap: 30px;
+      justify-content: center;
+      &-custom{
+        border-radius: 10px;
+        box-shadow: 0 0 45px $bshadow;
+        transition: all .3s ease;
+        padding: 20px 30px 35px 30px;
+        
+        &:hover {
+          transform: translateY(-10px);
+        }
+        &-img{
+          width: 115px;
+          height: auto;
+          margin: 20px 0px 5px 0px;
+        }
+      }
+    }
+  }
+}
+.common
+{
+  .edscard-custom,.edsteaser-custom,.edstitlecard-custom,.testimonal-slide
+  {
+    &-pretitle
+    {
+      color: $bluecol;
+      font-size: $font + 2px;
+    }
+    &-title
+    {
+      line-height:50px;
+      font-size: $font + 20px;
+      padding:10px 0px 15px 0px;
+      margin: 0px;
+      color: $btnhover;
+      @media (min-width: 320px) and (max-width: 767px)
+      {
+        font-size: $font + 13px;
+        line-height: 35px;
+      }
+    }
+    &-cardtitle
+    {
+      font-size: $font + 5px;
+      margin-bottom: 10px;
+      line-height: 25px;
+      color: $btnhover;
+    }
+    &-description,&-titledescription
+    {
+      line-height: 25px;
+      color: $des;
+      font-size: $font + 2px;
+    }
+  }
+}
+.fundamental{
+  @media (min-width: 320px) and (max-width: 767px)
+  {
+    flex-direction: column;
+    padding: 0px 20px !important;
+    gap: 15px !important;
+  }
+  @media (min-width: 768px) and (max-width: 1024px)
+  {
+    gap:20px !important;
+    padding: 0px 20px 20px 20px !important;
+    flex-wrap: wrap;
+  }
+  .edscard-custom{
+    margin: -60px 0px 0px 0px;
+    display: flex;
+    background-color: $white;
+    gap: 10px;
+    @media (min-width: 320px) and (max-width: 767px)
+    {
+      margin: 10px 0px 0px 0px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px)
+    {
+      width: 200px;
+      margin-top: 0px;
+    }
+  }
+}
+.service
+{
+  display:unset;
+  flex-wrap:wrap;
+  @media (min-width: 320px) and (max-width: 767px)
+  {
+    padding: 0px 20px !important;
+    gap: 15px !important;
+  }
+  @media (min-width: 768px) and (max-width: 1024px)
+  {
+    padding: 20px 30px 20px 30px !important;
+    gap:20px !important;
+  }
+  .edscard
+  {
+    padding: 0px;
+    &-custom{
+      display: flex;
+      align-items: center;
+      width: 25%;
+      text-align: center;
+      flex-direction:column;
+      @media (min-width: 320px) and (max-width: 767px)
+      {
+        width: 100%;
+      }
+      &-img{
+        width: 60px !important;
+        height: auto;
+      }
+      &-cardtitle
+      {
+        margin: 0px 0px 10px 0px;
+      }
+    }
+  }  
+}
+
+.blog
+{
+  padding:30px 55px !important;
+  @media (min-width: 320px) and (max-width: 767px)
+  {
+    flex-direction: column;
+    padding: 0px 20px !important;
+    gap: 15px !important;
+  }
+  @media (min-width: 768px) and (max-width: 1024px)
+  {
+    padding: 20px 25px !important;
+    flex-wrap: wrap;
+  }
+  .edscard-custom{
+    padding:0px !important;
+    border-radius: 0px !important;
+    text-align:left !important;
+    @media (min-width: 768px) and (max-width: 1024px)
+    {
+      width: 260px;
+    }
+    &-blogtitle
+    {
+      display:flex;
+      color: $des;
+      font-size: $font;
+      .icon
+      {
+        height: 17px;
+        width: 20px;
+        margin: 0px 9px 0px 0px;
+      }
+    }
+    .edscard-custom-img
+    {
+      width: 100%;
+      margin: 0px;
+    }
+    &-cardcontent
+    {
+      padding:15px 30px 30px 30px;
+    }
+    &-description
+    {
+      margin: 20px 0px 30px 0px;
+    }
+    &-cardtitle
+    {
+      margin: 25px 0px 0px 0px;
+    }
+    &-ctbtn
+    {
+      padding: 10px 30px;
+      border:1px solid $bluecol;
+      width: fit-content;
+      a
+      {
+        color: $btnhover;
+        font-size: 15px;
+      }
+    }
+  }
+}
+.member-section
+{
+  padding:40px 0px;
+  .default-content-wrapper
+  {
+    padding: 0px 23% 40px 23%;
+    @media (min-width: 320px) and (max-width: 767px)
+    {
+      padding: 0px 20px;
+    }
+    .pretitle,.title,.description
+    {
+      color: $white;
+    }
+  }
+}
+.member
+{
+  position: relative;
+  padding: 0px 55px 70px 55px !important;
+  overflow: hidden;
+  background: none !important;
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  @media (min-width: 768px) and (max-width: 1024px)
+  {
+    padding: 0px 20px 50px 20px !important;
+  }
+  @media (min-width: 320px) and (max-width: 767px)
+  {
+    flex-direction: column;
+    padding: 0px 20px !important;
+    gap: 15px !important;
+  }
+  .edscard-member-cards
+  {
+    display:flex;
+    gap:20px;
+  }
+  .edscard-custom{
+    padding:0px !important;
+    border-radius: 0px !important;
+    box-shadow: none !important;
+    background: $white !important;
+    text-align: center !important;
+    .edscard-custom-img
+    {
+      width: 100%;
+      margin: 0px;
+    }
+    .icon
+    {
+      border: 1px solid $iborder;
+      border-radius: 50%;
+      padding: 3px 7px 11px 7px;
+      margin-right: 8px;
+      img
+      {
+        width: 16px;
+        height: 16px;
+        @media (min-width: 320px) and (max-width: 767px)
+        {
+          width: 20px;
+          height: 25px;
+        }
+      }
+    }
+    .edscard-custom-cardcontent
+    {
+      padding: 10px 0px 30px 0px;
+    }
+  }
+}
+.choose
+{
+  padding:40px 55px !important;
+  @media (min-width: 320px) and (max-width: 767px)
+  {
+    flex-direction: column;
+    padding: 0px 20px !important;
+    gap: 15px !important;
+  }
+  @media (min-width: 768px) and (max-width: 1024px)
+  {
+    padding: 20px 20px 20px 20px !important;
+    gap:15px !important;
+    flex-wrap: wrap;
+  }
+  .edscard-custom{
+    display: flex;
+    align-items: center;
+    padding:0px 70px 10px 70px!important;
+    @media (min-width: 320px) and (max-width: 767px)
+    {
+      padding:0px 20px !important;
+    }
+    @media (min-width: 768px) and (max-width: 1024px)
+    {
+      padding: 0px 20px 0px 20px !important;
+    }
+    .icon
+    {
+      width:50px;
+      height:50px;
+      margin-right: 10px;
+      border-radius: 50%;
+      background: $white;
+      padding: 10px 8px 10px 10px;
+      img
+      {
+        border-radius: 50%;
+        margin:0px;
+      }
+    }
+    &:hover
+    {
+      background: $bluecol;
+      transition: all .3s ease;
+      .edscard-custom-cardtitle,.edscard-custom-description
+      {
+        color:$white;
+      }
+      
+    }
+  }
+}
+.process
+{
+  padding: 40px 55px !important;
+  @media (min-width: 320px) and (max-width: 767px)
+  {
+    flex-direction: column;
+    padding: 0px 20px !important;
+    gap: 15px !important;
+  }
+  @media (min-width: 768px) and (max-width: 1024px)
+  {
+    padding: 20px 20px 20px 20px !important;
+    gap:15px !important;
+    flex-wrap: wrap;
+  }
+  .edscard-custom
+  {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px !important;
+    box-shadow: none !important;
+    @media (min-width: 320px) and (max-width: 767px)
+    {
+      padding: 10px 20px !important;
+    }
+    @media (min-width: 768px) and (max-width: 1024px)
+    {
+      padding: 20px 20px 20px 20px !important;
+      width: 200px;
+    }
+    &-cardcontent
+    {
+      text-align: center;
+    }
+    .edscard-custom-img
+    {
+      border-radius: 50%;
+      width: 95px;
+      background: $bluecol;
+      height: 95px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      picture
+      {
+        display: flex;
+      }
+      img
+      {
+        width: 40px;
+        height: 40px;
+        margin: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,224 @@
+@import '../designsystem/variable.scss';
+.quotes-container
+{
+    display: flex;
+    margin: -70px 8% 0px 8% !important;
+    border-radius: 25px;
+    background-color: $white;
+    box-shadow: 0px 30px 40px -15px $qsha;
+    @media (min-width: 320px) and (max-width: 767px)
+    {
+        flex-direction: column;
+        margin: -20px 20px 0px 20px !important;
+    }
+    @media (min-width: 768px) and (max-width: 1024px)
+    {
+        margin: -20px 20px 0px 20px !important;
+    }
+    .default-content-wrapper
+    {
+        padding: 0px;
+        margin: 40px 60px;
+        @media (min-width: 320px) and (max-width: 767px)
+        {
+            margin: 10px 20px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px)
+        {
+            margin: 30px 20px 30px 20px;
+        }
+        .title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: $btnhover;
+            margin: 0 0 0.4rem;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: $des;
+            margin: 0;
+            font-weight: normal;
+        }
+    }
+    .quotes-wrapper
+    {
+        padding: 0px 5px 0px 0px !important;
+        margin: 0px 0px 0px 0px !important;
+        .quotes {
+        background: $white;
+        border-radius: 24px;
+        padding: 40px 45px 40px 55px;
+        @media (min-width: 320px) and (max-width: 767px)
+        {
+            padding: 30px 20px;
+        }
+        @media (min-width: 768px) and (max-width: 1024px)
+        {
+            padding: 40px 20px;
+        }
+        &-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+
+        }
+
+        &-form {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex: 1;
+            min-width: 300px;
+            justify-content: flex-end;
+            @media (min-width: 320px) and (max-width: 767px)
+            {
+                min-width: 100px;
+                gap: 0px;
+            }
+        }
+
+        &-input {
+            flex: 1;
+            width: 425px;
+            padding: 15px 30px;
+            border: 1px solid $iborder;
+            border-radius: 50px;
+            font-size: 16px;
+            @media (min-width: 320px) and (max-width: 767px)
+            {
+                width: 140px;
+                padding: 8px 30px;
+            }
+            @media (min-width: 768px) and (max-width: 1024px)
+            {
+                width: 230px;
+            }
+            &::placeholder {
+            color: $des;
+            }
+
+            &:focus {
+            outline: none;
+            border-color: $bluecol;
+            }
+        }
+
+        &-button {
+            background: $bluecol;
+            color: $white;
+            border: none;
+            padding: 15px 60px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            margin-left: -70px;
+            cursor: pointer;
+            white-space: nowrap;
+            @media (min-width: 320px) and (max-width: 767px)
+            {
+                margin-left: -40px;
+                padding: 8px 20px;
+            }
+            &:hover {
+            background: $bluecol;
+            }
+        }
+        }
+    }
+}
+
+// ---------- MODAL STYLES (top-level, NOT nested) ----------
+// These are appended to document.body by JS, so they must NOT
+// be scoped inside .quotes-container, or the compiled selector
+// will never match the modal's actual position in the DOM.
+.quotes__modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.quotes__modal {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 32px;
+  max-width: 400px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif;
+}
+
+.quotes__modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  color: #333;
+}
+
+.quotes__modal-thanks {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.quotes__modal-details-btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  background: $bluecol;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+
+  &:hover {
+    background: $bluecol;
+  }
+}
+
+.quotes__modal-details {
+  margin-top: 30px;
+  padding: 20px;
+  background: $white;
+  border: 1px solid $iborder;
+  border-radius: 10px;
+  display: none;
+
+  &--visible {
+    display: block;
+  }
+}
+
+.quotes__modal-detail-row {
+  display: flex;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 16px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.quotes__modal-detail-label {
+  font-weight: 700;
+  color: $btnhover;
+  text-transform: capitalize;
+}
+
+.quotes__modal-detail-value {
+  color: $des;
+  word-break: break-word;
+}
