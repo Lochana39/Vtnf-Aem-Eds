@@ -1,0 +1,262 @@
+@import '../designsystem/variable.scss';
+.edsteaser-container{
+  .edsteaser-wrapper{
+    max-width: none;
+    margin: 0px;
+    padding: 0px;
+    .edsteaser {
+      &-custom{
+        display: flex;
+        @media (min-width: 320px) and (max-width: 767px)
+        {
+          flex-direction: column;
+          padding: 0px 20px !important;
+          gap: 15px !important;
+        }
+        &-img{
+          width:100%;
+        }
+        &-pretitle
+        {
+          color: $bluecol;
+        }
+        &-content{
+          width:100%;
+          padding: 0px 30px 0px 30px;
+          @media (min-width: 320px) and (max-width: 767px)
+          {
+          padding: 0px;
+          }
+        }
+        &-btn
+        {
+          background: $bluecol;
+          color: $white;
+          margin-right: 15px;
+          font-weight: bold;
+          padding: 15px 35px;
+          border-radius: 50px;
+          display: inline-block;
+          a
+          {
+            color:$white;
+            font-size:$font + 2px;
+            text-transform: capitalize;
+            text-decoration: none;
+          }
+          &:hover{
+            color:$white;
+            background-color:$btnhover;
+          }
+          &:active,&:focus
+          {
+            outline:0;
+          }
+        }
+        &-description
+        {
+          line-height: 25px;
+          color: $des;
+          font-size: $font + 2px;
+        }
+      }
+    }
+  }
+}
+
+.stratergy
+{
+  padding:40px 60px;
+  @media (min-width: 320px) and (max-width: 767px)
+  {
+    padding: 0px 25px;
+  }
+  @media (min-width: 768px) and (max-width: 1020px)
+  {
+    padding: 30px 25px;
+  }
+  .edsteaser-custom
+  {
+    padding: 40px 40px;
+    border: 1px solid $gborder;
+    @media (min-width: 768px) and (max-width: 1020px)
+    {
+      padding: 20px 20px 20px 0px;
+    }
+    &-ul
+    {
+      list-style: none;
+      line-height: 25px;
+      color: $des;
+      font-size: $font + 2px;
+      display: unset !important;
+      li
+      {
+        width:100% !important;
+        position: relative;
+        padding: 0px 0px 0px 35px;
+        @media (min-width: 320px) and (max-width: 767px)
+        {
+        padding: 0px 0px 0px 17px;
+        }
+        &:before
+        {
+        content: "✓";
+        position: absolute;
+        left: 0px !important;
+        color: $bluecol !important;
+        background-color: transparent !important;
+        }
+      }
+    } 
+  }  
+}
+.member
+{
+  .edscard-custom-carddiv
+  {
+    padding: 0px 20px 30px 20px;
+    gap: 50px!important;
+    .edstitlecard-custom
+    {
+      background: $white;
+      padding: 0px !important;
+    }
+  }
+  .edscard-custom-titlediv{
+    .edstitlecard-custom
+    {
+      &-pretitle,&-title,&-titledescription
+      {
+      color: $white;
+      }
+    }
+  }
+}
+.purchase
+{
+  .edsteaser-custom
+  {
+    &-ul
+    {
+      list-style: none;
+      padding: 15px 0px 0px 35px;
+      line-height: 25px;
+      color: $des;
+      font-size: $font + 2px;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 90px;
+      row-gap: 20px;
+      @media (min-width: 320px) and (max-width: 767px)
+      {
+        flex-direction: column;
+      }
+      @media (min-width: 768px) and (max-width: 1020px)
+      {
+        gap:40px;
+      }
+      li
+      {
+        width:40%;
+        position: relative;
+        @media (min-width: 320px) and (max-width: 767px)
+        {
+          width: 100%;
+        }
+        &:before
+        {
+          content: "✓";
+          position: absolute;
+          left: -32px;
+          top: 0px;
+          width: 22px;
+          font-size: $font;
+          color: $white;
+          font-weight: bold;
+          height: 22px;
+          border-radius: 50%;
+          background-color: $bluecol;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+.solution
+{
+  .edsteaser-custom
+  {
+    &-img
+    {
+      img
+      {
+        width: 100%;
+        object-position: top right;
+        height: 600px;
+        object-fit: none;
+        @media (min-width: 320px) and (max-width: 767px)
+        {
+          object-fit: contain;
+          height: auto;
+        }
+      }
+    }
+    .edsteaser-custom-content {
+      width: 75%;
+      padding: 25px 70px 0px 35px;
+      @media (min-width: 320px) and (max-width: 767px)
+      {
+        padding: 0px 30px;
+      }
+    }
+    &-title
+    {
+      margin: 25px 0px 15px 0px;
+      padding: 0px;
+    }
+    &-description
+    {
+      margin: 0px 0px 25px 0px;
+    }
+    .edsteaser-progress {
+      margin-top: 19px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 8px;
+        font-weight: 700;
+        font-size: $font + 1px;
+      }
+      &-track {
+        position: relative;
+        width: 100%;
+        height: 6px;
+        background-color: $gborder;
+        border-radius: 4px;
+        margin-top: 10px;
+      }
+      &-bar-fill {
+        height: 100%;
+        width: 0%;
+        background-color: $bluecol;
+        border-radius: 4px;
+        transition: width 1.4s cubic-bezier(0.25, 1, 0.5, 1);
+      }
+      &-value {
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        transform: translateX(-50%);
+        margin-bottom: 4px;
+        font-weight: 700;
+        font-size: $font - 1px;
+        white-space: nowrap;
+      }
+    }
+  }
+}

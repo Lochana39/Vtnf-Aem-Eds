@@ -168,4 +168,21 @@ export default async function decorate(block) {
   navWrapper.className = 'nav-wrapper';
   navWrapper.append(nav);
   block.append(navWrapper);
+
+  const header = document.querySelector('.header.block');
+  const nw = document.querySelector('.nav-wrapper');
+  const navTools = document.querySelector('.nav-tools');
+
+  if (header && nw && navTools) {
+    const newDiv = document.createElement('div');
+    newDiv.classList.add('nav-tools-top');
+    newDiv.appendChild(navTools);
+    header.insertBefore(newDiv, navWrapper);
+  }
+  const b = [...block.children];
+  b.forEach((bk) => {
+    bk.classList.add('nav-custom');
+    const ulist = bk.querySelector('ul');
+    ulist?.classList.add('nav-custom-ul');
+  });
 }

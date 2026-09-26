@@ -1,0 +1,369 @@
+// @import '../designsystem/variable.scss';
+
+// .consultant-container {
+//   .consultant-wrapper {
+//     max-width: none;
+//     padding: 0px;
+//     margin: 0px;
+//     .consultant {
+//       background-size: cover;
+//       background-position: center;
+//       padding: 50px;
+//       color: $white;
+//       @media (min-width: 320px) and (max-width: 767px) {
+//         background-position: left;
+//         padding: 30px;
+//       }
+
+//       &-wrapper {
+//         max-width: 600px;
+//         @media (min-width: 768px) and (max-width: 1020px) {
+//           width: 60%;
+//         }
+//       }
+
+//       &-eyebrow {
+//         color: $white;
+//         font-weight: 700;
+//         font-size: $font + 1px;
+//         margin: 0 0 20px;
+//       }
+
+//       &-title {
+//         font-size: 36px;
+//         font-weight: 800;
+//         margin: 0 0 2rem;
+//         @media (min-width: 768px) and (max-width: 1020px) {
+//           font-size: 32px;
+//         }
+//       }
+
+//       &-grid {
+//         display: grid;
+//         grid-template-columns: 1fr 1fr;
+//         gap: 1rem;
+//         margin-bottom: 1rem;
+//         @media (width <= 600px) {
+//           grid-template-columns: 1fr;
+//         }
+//       }
+
+//       &-input {
+//         background: transparent;
+//         border: 1px solid rgba(255, 255, 255, 0.3);
+//         border-radius: 6px;
+//         padding: 0.9rem 1.1rem;
+//         color: $white;
+//         font-size: 0.95rem;
+//         width: 100%;
+//         box-sizing: border-box;
+
+//         &::placeholder {
+//           color: rgba(255, 255, 255, 0.7);
+//         }
+
+//         &:focus {
+//           outline: none;
+//           border-color: $bluecol;
+//         }
+
+//         &--textarea {
+//           min-height: 140px;
+//           resize: vertical;
+//           margin-bottom: 1.5rem;
+//         }
+//       }
+
+//       &-button {
+//         background: $bluecol;
+//         color: $white;
+//         border: none;
+//         padding: 0.9rem 2rem;
+//         border-radius: 999px;
+//         font-weight: 700;
+//         font-size: 0.95rem;
+//         cursor: pointer;
+
+//         &:hover {
+//           background: $bluecol;
+//         }
+//       }
+
+//     }
+//   }
+// }
+
+// // ---------- MODAL STYLES (top-level, NOT nested) ----------
+// // These are appended to document.body by JS, so they must NOT
+// // be scoped inside .consultant-container / .consultant-wrapper,
+// // or the compiled selector will never match the modal's actual
+// // position in the DOM.
+// .consultant__modal-overlay {
+//   position: fixed;
+//   inset: 0;
+//   background: rgba(0, 0, 0, 0.6);
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   z-index: 9999;
+// }
+
+// .consultant__modal {
+//   background: #ffffff;
+//   border-radius: 8px;
+//   padding: 32px;
+//   max-width: 400px;
+//   width: 90%;
+//   position: relative;
+//   text-align: center;
+//   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+//   font-family: sans-serif;
+// }
+
+// .consultant__modal-close {
+//   position: absolute;
+//   top: 8px;
+//   right: 12px;
+//   background: none;
+//   border: none;
+//   font-size: 24px;
+//   cursor: pointer;
+//   line-height: 1;
+//   color: #333;
+// }
+
+// .consultant__modal-thanks {
+//   font-size: 18px;
+//   margin-bottom: 20px;
+//   color: #111;
+// }
+
+// .consultant__modal-details-btn {
+//   padding: 8px 16px;
+//   cursor: pointer;
+//   background: #111;
+//   color: #fff;
+//   border: none;
+//   border-radius: 4px;
+//   font-size: 14px;
+
+//   &:hover {
+//     background: #333;
+//   }
+// }
+
+// .consultant__modal-details {
+//   margin-top: 16px;
+//   padding: 12px;
+//   background: #f5f5f5;
+//   border-radius: 4px;
+//   font-size: 14px;
+//   word-break: break-word;
+//   text-align: left;
+//   display: none;
+//   color: #333;
+
+//   &--visible {
+//     display: block;
+//   }
+// }
+
+@import '../designsystem/variable.scss';
+
+.consultant-container {
+  .consultant-wrapper {
+    max-width: none;
+    padding: 0px;
+    margin: 0px;
+    .consultant {
+      background-size: cover;
+      background-position: center;
+      padding: 50px;
+      color: $white;
+      @media (min-width: 320px) and (max-width: 767px) {
+        background-position: left;
+        padding: 30px;
+      }
+
+      &-wrapper {
+        max-width: 600px;
+        @media (min-width: 768px) and (max-width: 1020px) {
+          width: 60%;
+        }
+      }
+
+      &-eyebrow {
+        color: $white;
+        font-weight: 700;
+        font-size: $font + 1px;
+        margin: 0 0 20px;
+      }
+
+      &-title {
+        font-size: 36px;
+        font-weight: 800;
+        margin: 0 0 2rem;
+        @media (min-width: 768px) and (max-width: 1020px) {
+          font-size: 32px;
+        }
+      }
+
+      &-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+        @media (width <= 600px) {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      &-input {
+        background: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        border-radius: 6px;
+        padding: 0.9rem 1.1rem;
+        color: $white;
+        font-size: 0.95rem;
+        width: 100%;
+        box-sizing: border-box;
+
+        &::placeholder {
+          color: rgba(255, 255, 255, 0.7);
+        }
+
+        &:focus {
+          outline: none;
+          border-color: $bluecol;
+        }
+
+        &--textarea {
+          min-height: 140px;
+          resize: vertical;
+          margin-bottom: 1.5rem;
+        }
+      }
+
+      &-button {
+        background: $bluecol;
+        color: $white;
+        border: none;
+        padding: 0.9rem 2rem;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 0.95rem;
+        cursor: pointer;
+
+        &:hover {
+          background: $bluecol;
+        }
+      }
+
+      
+    }
+  }
+}
+
+// ---------- MODAL STYLES (top-level, NOT nested) ----------
+.consultant__modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.consultant__modal {
+  background: $white;
+  border-radius: 8px;
+  padding: 32px;
+  max-width: 450px;
+  width: 90%;
+  position: relative;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  font-family: sans-serif;
+}
+
+.consultant__modal-close {
+  position: absolute;
+  top: 8px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+  color: #333;
+}
+
+.consultant__modal-thanks {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: $btnhover;
+  position: relative;
+  &::before
+  {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: $bluecol !important;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $btnhover;
+    font-size: 18px;
+    font-weight: 700;
+  
+  }
+}
+
+.consultant__modal-details-btn {
+  padding: 8px 16px;
+  cursor: pointer;
+  background: $bluecol;
+  color: $white;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+
+  &:hover {
+    background: $bluecol;
+  }
+}
+
+.consultant__modal-details {
+  margin-top: 30px;
+  padding: 12px;
+  background: $white;
+  border-radius: 4px;
+  text-align: left;
+  display: none;
+  border: 1px solid $iborder;
+  &--visible {
+    display: block;
+  }
+}
+
+.consultant__modal-detail-row {
+  display: flex;
+  gap: 10px;
+  padding: 6px 0;
+  font-size: 16px;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.consultant__modal-detail-label {
+  font-weight: 700;
+  color: $btnhover;
+  text-transform: capitalize;
+}
+
+.consultant__modal-detail-value {
+  color: $des;
+ 
+}

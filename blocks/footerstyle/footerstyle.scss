@@ -1,0 +1,127 @@
+@import '../designsystem/variable.scss';
+.footerstyle {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $white;
+  padding: 65px 0px 65px 85px;
+  @media (min-width: 320px) and (max-width: 767px)
+  {
+    padding: 25px 0px 0px 35px;
+  }
+  @media (min-width: 768px) and (max-width: 1024px)
+  {
+    padding: 50px 25px 30px 25px;
+  }
+  &-custom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin: 0 auto;
+    padding-bottom: 48px;
+    @media (min-width: 320px) and (max-width: 767px)
+    {
+      flex-direction: column;
+      gap: 15px;
+      padding: 0px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px)
+    {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &-columns {
+    flex: 1;
+    @media (min-width: 768px) and (max-width: 1024px)
+    {
+      width: 320px !important;
+      flex: none;
+    }
+    &-img{
+      margin:0px 0px 30px 0px !important;
+    }
+    &-para{
+      color: $fpara;
+      font-size: $font - 1px;
+      padding: 30px 40px 30px 0px;
+    }
+    &-ftitle{
+      font-size: $font + 3px;
+      margin: 15px 0px 30px 0px;
+      color: $white;
+    }
+    &-icon
+    {
+      .icon{
+        width: 20px;
+        height:20px;
+        padding-right: 10px;
+      }
+    }
+    &-ul{
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        margin-bottom: 12px;
+        width: 75%;
+        display: flex;
+        .icon
+        {
+          width: 20px;
+          height:20px;
+          padding-right: 3px;
+        }
+        a {
+          color: $fpara;
+          text-decoration: none;
+          font-size: $font - 1px;
+          &:hover {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer {
+  .section:last-of-type {
+    background: $bluecol;
+    .default-content-wrapper {
+      margin: 0 auto;
+      padding: 20px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media (min-width: 320px) and (max-width: 767px)
+      {
+        flex-direction: column;
+        gap: 0px;
+        padding: 10px 30px;
+        align-items: start;
+      }
+    }
+    p
+    {
+      a
+      {
+        color: $white;
+      }
+    }
+    ul {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      a{
+        color: $white;
+        text-decoration: none;
+        font-size: $font - 1px;
+      }
+    }
+  }
+}
