@@ -1,78 +1,3 @@
-// export default async function decorate(block) {
-//   const link = block.querySelector('a');
-//   const url = link?.href;
-//   if (!url) return;
-//   const section = block.closest('.section');
-//   const heading = section.querySelector('.default-content-wrapper h2');
-//   const subtitle = section.querySelector('.default-content-wrapper h3');
-//   heading?.classList.add('title');
-//   subtitle?.classList.add('subtitle');
-//   const resp = await fetch(url);
-//   const json = await resp.json();
-//   const fields = json.data;
-
-//   block.innerHTML = '';
-
-//   const wrapper = document.createElement('div');
-//   wrapper.className = 'quotes-wrapper';
-//   const form = document.createElement('form');
-//   form.className = 'quotes-form';
-
-//   fields.forEach((field) => {
-//     const {
-//       Field, placeholder, Type, Required,
-
-//     } = field;
-
-//     if (Type === 'submit') {
-//       const btn = document.createElement('button');
-//       btn.type = 'submit';
-//       btn.className = 'quotes-button';
-//       btn.textContent = placeholder;
-//       form.append(btn);
-//       return;
-//     }
-
-//     const input = document.createElement('input');
-//     input.type = Type;
-//     input.name = Field;
-//     input.id = `quotes-${Field}`;
-//     input.className = 'quotes-input';
-//     input.placeholder = placeholder || '';
-//     if (Required === 'true') input.required = true;
-
-//     form.append(input);
-//   });
-
-//   form.addEventListener('submit', async (e) => {
-//     e.preventDefault();
-//     const data = Object.fromEntries(new FormData(form).entries());
-
-//     try {
-//       const submitResp = await fetch(url.replace('.json', ''), {
-//         method: 'POST',
-//         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-//         body: new URLSearchParams(data).toString(),
-//       });
-
-//       if (submitResp.ok) {
-//         form.reset();
-//         // eslint-disable-next-line no-alert
-//         alert('Submitted successfully!');
-//       } else {
-//         // eslint-disable-next-line no-alert
-//         alert('Something went wrong. Please try again.');
-//       }
-//     } catch (err) {
-//       // eslint-disable-next-line no-console
-//       console.error('Quotes form submission failed:', err);
-//     }
-//   });
-
-//   wrapper.append(form);
-//   block.append(wrapper);
-// }
-
 export default async function decorate(block) {
   const link = block.querySelector('a');
   const url = link?.href;
@@ -190,35 +115,8 @@ export default async function decorate(block) {
     e.preventDefault();
     const data = Object.fromEntries(new FormData(form).entries());
 
-    // ============================================
-    // TEMP
-    // ============================================
-    // form.reset();
-    // showSuccessModal(data);
-    // return;
-    // ============================================
-    // TEMP BLOCK ENDS HERE
-    // ============================================
-
-    // eslint-disable-next-line no-unreachable
-    try {
-      const submitResp = await fetch(url.replace('.json', ''), {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams(data).toString(),
-      });
-
-      if (submitResp.ok) {
-        form.reset();
-        showSuccessModal(data);
-      } else {
-        // eslint-disable-next-line no-alert
-        alert('Something went wrong. Please try again.');
-      }
-    } catch (err) {
-      // eslint-disable-next-line no-console
-      console.error('Quotes form submission failed:', err);
-    }
+    form.reset();
+    showSuccessModal(data);
   });
 
   wrapper.append(form);
