@@ -1,40 +1,49 @@
 @charset "UTF-8";
+
 .edsteaser-container .edsteaser-wrapper {
   max-width: none;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
+
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom {
   display: flex;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .edsteaser-container .edsteaser-wrapper .edsteaser-custom {
     flex-direction: column;
-    padding: 0px 20px !important;
+    padding: 0 20px !important;
     gap: 15px !important;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .edsteaser-container .edsteaser-wrapper .edsteaser-custom {
     flex-direction: column;
     row-gap: 25px;
   }
 }
+
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-img {
   width: 100%;
 }
+
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-pretitle {
   color: var(--bluecol);
 }
+
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-content {
   width: 100%;
-  padding: 0px 30px 0px 30px;
+  padding: 0 30px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .edsteaser-container .edsteaser-wrapper .edsteaser-custom-content {
-    padding: 0px;
+    padding: 0;
   }
 }
+
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn {
   background: var(--bluecol);
   color: var(--white);
@@ -44,19 +53,23 @@
   border-radius: 50px;
   display: inline-block;
 }
+
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn a {
   color: var(--white);
   font-size: var(--font)2px;
   text-transform: capitalize;
   text-decoration: none;
 }
+
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn:hover {
   color: var(--white);
   background-color: var(--btnhover);
 }
+
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn:active, .edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn:focus {
   outline: 0;
 }
+
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-description {
   line-height: 25px;
   color: var(--des);
@@ -64,27 +77,32 @@
 }
 
 .stratergy {
-  padding: 0px 80px 40px 80px;
+  padding: 0 80px 40px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .stratergy {
-    padding: 0px 25px;
+    padding: 0 25px;
   }
 }
-@media (min-width: 768px) and (max-width: 1020px) {
+
+@media (width >= 768px) and (width <= 1020px) {
   .stratergy {
-    padding: 0px 35px;
+    padding: 0 35px;
   }
 }
+
 .stratergy .edsteaser-custom {
   padding: 90px 65px;
   border: 1px solid #cdcdcd;
 }
-@media (min-width: 768px) and (max-width: 1020px) {
+
+@media (width >= 768px) and (width <= 1020px) {
   .stratergy .edsteaser-custom {
     padding: 25px;
   }
 }
+
 .stratergy .edsteaser-custom-ul {
   list-style: none;
   line-height: 25px;
@@ -92,28 +110,33 @@
   font-size: var(--font)2px;
   display: unset !important;
 }
+
 .stratergy .edsteaser-custom-ul li {
   width: 100%;
   position: relative;
-  padding: 0px 0px 0px 35px;
+  padding: 0 0 0 35px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .stratergy .edsteaser-custom-ul li {
-    padding: 0px 0px 0px 17px;
+    padding: 0 0 0 17px;
   }
 }
-.stratergy .edsteaser-custom-ul li:before {
+
+.stratergy .edsteaser-custom-ul li::before {
   content: "✓";
   position: absolute;
-  left: 0px;
+  left: 0;
   color: var(--bluecol);
   background-color: transparent;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .stratergy .edsteaser-custom-content {
-    padding: 0px 10px 0px 10px !important;
+    padding: 0 10px !important;
   }
 }
+
 .stratergy .edsteaser-custom .edsteaser-custom-btn {
   margin-top: 35px;
 }
@@ -121,60 +144,68 @@
 .purchase {
   padding: 25px 50px 50px 65px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .purchase {
-    padding: 0px 0px 25px 10px;
+    padding: 0 0 25px 10px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .purchase {
-    padding: 0px 50px 50px 65px;
+    padding: 0 50px 50px 65px;
   }
 }
+
 .purchase .edsteaser-custom .edsteaser-custom-content {
-  padding: 0px 10px 0px 30px;
+  padding: 0 10px 0 30px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .purchase .edsteaser-custom .edsteaser-custom-content {
-    padding: 0px 10px 0px 0px;
+    padding: 0 10px 0 0;
   }
 }
+
 .purchase .edsteaser-custom-ul {
   list-style: none;
-  padding: 15px 0px 0px 35px;
+  padding: 15px 0 0 35px;
   line-height: 25px;
   color: var(--des);
   font-size: var(--font)2px;
   display: flex;
   flex-wrap: wrap;
-  -moz-column-gap: 90px;
-       column-gap: 90px;
-  row-gap: 20px;
+  gap: 20px 90px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .purchase .edsteaser-custom-ul {
     flex-direction: column;
   }
 }
-@media (min-width: 768px) and (max-width: 1020px) {
+
+@media (width >= 768px) and (width <= 1020px) {
   .purchase .edsteaser-custom-ul {
     gap: 40px;
   }
 }
+
 .purchase .edsteaser-custom-ul li {
   width: 40%;
   position: relative;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .purchase .edsteaser-custom-ul li {
     width: 100%;
   }
 }
-.purchase .edsteaser-custom-ul li:before {
+
+.purchase .edsteaser-custom-ul li::before {
   content: "✓";
   position: absolute;
   left: -32px;
-  top: 0px;
+  top: 0;
   width: 22px;
   font-size: var(--font);
   color: var(--white);
@@ -184,59 +215,66 @@
   background-color: var(--bluecol);
   text-align: center;
 }
+
 .purchase .edsteaser-custom .edsteaser-custom-btn {
   margin-top: 30px;
 }
+
 .purchase .edsteaser-custom .edsteaser-custom-img img {
   width: 100%;
 }
 
 .solution .edsteaser-custom-img img {
   width: 100%;
-  -o-object-position: top right;
      object-position: top right;
   height: 600px;
-  -o-object-fit: cover;
      object-fit: cover;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .solution .edsteaser-custom-img img {
-    -o-object-fit: contain;
        object-fit: contain;
     height: auto;
   }
 }
+
 .solution .edsteaser-custom .edsteaser-custom-content {
   width: 90%;
-  padding: 50px 70px 0px 35px;
+  padding: 50px 70px 0 35px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .solution .edsteaser-custom .edsteaser-custom-content {
-    padding: 0px 10px;
+    padding: 0 10px;
     width: 100%;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .solution .edsteaser-custom .edsteaser-custom-content {
-    padding: 50px 35px 0px 35px;
+    padding: 50px 35px 0;
     width: 90%;
   }
 }
+
 .solution .edsteaser-custom-title {
-  margin: 25px 0px 15px 0px;
-  padding: 0px;
+  margin: 25px 0 15px;
+  padding: 0;
 }
+
 .solution .edsteaser-custom-description {
-  margin: 0px 0px 25px 0px;
-  padding: 0px 30px 0px 0px;
+  margin: 0 0 25px;
+  padding: 0 30px 0 0;
 }
+
 .solution .edsteaser-custom .edsteaser-progress {
   margin-top: 19px;
   display: flex;
   flex-direction: column;
   gap: 15px;
-  padding: 0px 80px 0px 0px;
+  padding: 0 80px 0 0;
 }
+
 .solution .edsteaser-custom .edsteaser-progress-header {
   display: flex;
   justify-content: space-between;
@@ -245,6 +283,7 @@
   font-weight: 700;
   font-size: calc(var(--font) + 1px);
 }
+
 .solution .edsteaser-custom .edsteaser-progress-track {
   position: relative;
   width: 100%;
@@ -253,6 +292,7 @@
   border-radius: 4px;
   margin-top: 10px;
 }
+
 .solution .edsteaser-custom .edsteaser-progress-bar-fill {
   height: 100%;
   width: 0%;
@@ -260,6 +300,7 @@
   border-radius: 4px;
   transition: width 1.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
+
 .solution .edsteaser-custom .edsteaser-progress-value {
   position: absolute;
   bottom: 100%;

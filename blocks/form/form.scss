@@ -30,7 +30,7 @@
             width: 100%;
             box-sizing: border-box;
             font-size: calc(var(--font) + 1px);
-            font-family: 'Livvic';
+            font-family: 'Livvic', sans-serif;
           }
         }
         button {
@@ -321,8 +321,7 @@
     }
     .fname {
       margin: 0;
-      word-break: break-word;
+      overflow-wrap: anywhere;
     }
   }
 }
-

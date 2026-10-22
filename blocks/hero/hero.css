@@ -1,72 +1,84 @@
 .hero-container {
-  margin: 0px !important;
+  margin: 0 !important;
 }
+
 .hero-container .hero-wrapper {
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
   max-width: none;
 }
+
 .hero-container .hero-wrapper .hero {
   background-position: -314px -5px;
   background-size: 150%;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .hero-container .hero-wrapper .hero {
     background-position: left top;
     background-size: cover;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .hero-container .hero-wrapper .hero {
     background-position: center top;
     background-size: cover;
   }
 }
+
 .hero-container .hero-wrapper .hero-custom {
   padding: 225px 15% 250px 5%;
   margin-top: 140px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .hero-container .hero-wrapper .hero-custom {
-    padding: 120px 20px 25px 20px;
+    padding: 120px 20px 25px;
     margin-top: 120px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .hero-container .hero-wrapper .hero-custom {
     padding: 120px 0% 60px 7%;
     margin-top: 40px;
   }
 }
+
 .hero-container .hero-wrapper .hero-title {
   font-size: calc(var(--font) + 41px);
   color: var(--btnhover);
   font-weight: bold;
   line-height: 75px;
-  margin: 0px 0px 0px 0px;
+  margin: 0;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .hero-container .hero-wrapper .hero-title {
     font-size: calc(var(--font) + 15px);
     line-height: 40px;
   }
 }
+
 .hero-container .hero-wrapper .hero-description {
   width: 65%;
   line-height: 35px;
   font-size: calc(var(--font) + 5px);
   color: var(--des);
-  padding: 30px 0px 45px 0px;
+  padding: 30px 0 45px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .hero-container .hero-wrapper .hero-description {
     width: 100%;
-    padding: 0px;
-    margin: 10px 0px;
+    padding: 0;
+    margin: 10px 0;
     font-size: calc(var(--font) + 2px);
     line-height: 25px;
   }
 }
+
 .hero-container .hero-wrapper .hero-btn a {
   background: var(--bluecol);
   color: var(--white);
@@ -77,7 +89,8 @@
   text-decoration: none;
   font-size: calc(var(--font) + 2px);
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .hero-container .hero-wrapper .hero-btn a {
     margin-right: 10px;
     padding: 10px 20px;

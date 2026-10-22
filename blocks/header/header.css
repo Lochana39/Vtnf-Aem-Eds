@@ -287,7 +287,7 @@ header nav .nav-tools {
   @media (width >= 320px) and (width <= 767px)
   {
     flex-direction: column;
-    padding: 10px 20px 15px 20px;
+    padding: 10px 20px 15px;
     gap:8px;
   }
 
@@ -309,13 +309,15 @@ header nav p {
   margin: 0;
   line-height: 1;
   font-size : 17px;
+
   @media (width >= 320px) and (width <= 767px)
   {
     margin:15px 0;
   }
+
   @media(width >= 768px) and (width <= 1024px)
   {
-    padding: 10px 0px;
+    padding: 10px 0;
     font-size: 20px;
   }
 }
@@ -343,6 +345,7 @@ header nav p {
     width: fit-content;
     padding: 5px 20px;
   }
+
   @media(width >= 768px) and (width <= 1024px)
   {
     padding: 12px 35px;
@@ -360,7 +363,7 @@ header nav p {
 
 .nav-wrapper
 {
-  padding: 15px 30px 15px 0px;
+  padding: 15px 30px 15px 0;
 
   @media (width >= 320px) and (width <= 767px)
   {

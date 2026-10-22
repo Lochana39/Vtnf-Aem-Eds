@@ -4,93 +4,111 @@
   background-position: center;
   background-repeat: no-repeat;
   color: var(--white);
-  padding: 60px 0px 60px 100px;
+  padding: 60px 0 60px 100px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .footerstyle {
-    padding: 40px 0px 40px 35px;
+    padding: 40px 0 40px 35px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .footerstyle {
-    padding: 50px 25px 30px 25px;
+    padding: 50px 25px 30px;
   }
 }
+
 .footerstyle-custom {
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   margin: 0 auto;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .footerstyle-custom {
     flex-direction: column;
     gap: 15px;
-    padding: 0px;
+    padding: 0;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .footerstyle-custom {
     flex-wrap: wrap;
     justify-content: center;
   }
 }
+
 .footerstyle-columns {
   flex: 1;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .footerstyle-columns {
     flex: none;
     height: 235px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .footerstyle-columns {
     width: 320px !important;
     flex: none;
   }
 }
+
 .footerstyle-columns-img {
-  margin: 0px 0px 30px 0px !important;
+  margin: 0 0 30px !important;
 }
+
 .footerstyle-columns-para {
   color: var(--fpara);
   font-size: calc(var(--font) - 1px);
-  padding: 30px 40px 30px 0px;
+  padding: 30px 40px 30px 0;
 }
+
 .footerstyle-columns-ftitle {
   font-size: var(--font)3px;
-  margin: 15px 0px 30px 0px;
+  margin: 15px 0 30px;
   color: var(--white);
 }
+
 .footerstyle-columns-icon {
   display: flex;
 }
+
 .footerstyle-columns-icon .icon {
   width: 20px;
   height: 18px;
   padding-right: 20px;
 }
+
 .footerstyle-columns-ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .footerstyle-columns-ul li {
   margin-bottom: 12px;
   width: 75%;
   display: flex;
 }
+
 .footerstyle-columns-ul li .icon {
   width: 16px;
   height: 25px;
   padding-right: 7px;
 }
+
 .footerstyle-columns-ul li a {
   color: var(--iborder);
   text-decoration: none;
   font-size: calc(var(--font) - 1px);
 }
+
 .footerstyle-columns-ul li a:hover {
   color: var(--white);
 }
@@ -98,6 +116,7 @@
 .footer .section:last-of-type {
   background: var(--bluecol);
 }
+
 .footer .section:last-of-type .default-content-wrapper {
   margin: 0 35px;
   padding: 20px 50px;
@@ -105,22 +124,26 @@
   align-items: center;
   justify-content: space-between;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .footer .section:last-of-type .default-content-wrapper {
     flex-direction: column;
-    gap: 0px;
-    padding: 10px 0px;
+    gap: 0;
+    padding: 10px 0;
     align-items: start;
   }
 }
+
 .footer .section:last-of-type p a {
   color: var(--white);
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .footer .section:last-of-type p a {
     font-size: calc(var(--font) - 1px);
   }
 }
+
 .footer .section:last-of-type ul {
   display: flex;
   gap: 24px;
@@ -128,6 +151,7 @@
   margin: 0;
   padding: 0;
 }
+
 .footer .section:last-of-type ul a {
   color: var(--white);
   text-decoration: none;

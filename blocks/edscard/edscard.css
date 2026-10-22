@@ -1,80 +1,95 @@
 .edscard-container {
-  margin: 0px !important;
+  margin: 0 !important;
 }
+
 .edscard-container .default-content-wrapper {
   text-align: center;
 }
+
 .edscard-container .default-content-wrapper .pretitle {
   color: var(--bluecol);
   font-size: calc(var(--font) + 2px);
 }
+
 .edscard-container .default-content-wrapper .title {
   line-height: 50px;
   font-size: calc(var(--font) + 20px);
-  padding: 10px 0px 15px 0px;
-  margin: 0px;
+  padding: 10px 0 15px;
+  margin: 0;
   color: var(--btnhover);
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .edscard-container .default-content-wrapper .title {
     font-size: calc(var(--font) + 12px);
     line-height: 35px;
   }
 }
+
 .edscard-container .default-content-wrapper .description {
   line-height: 25px;
   color: var(--des);
   font-size: calc(var(--font) + 2px);
 }
+
 .edscard-container .edscard-wrapper {
-  padding: 35px 0px;
+  padding: 35px 0;
   max-width: none;
 }
+
 .edscard-container .edscard-wrapper .edscard {
   display: flex;
   justify-content: center;
 }
+
 .edscard-container .edscard-wrapper .edscard-custom:hover {
   transform: translateY(-10px);
 }
+
 .edscard-container .edscard-wrapper .edscard-custom-img {
   width: 115px;
   height: auto;
-  margin: 10px 0px 5px 0px;
+  margin: 10px 0 5px;
 }
 
 .common {
   gap: 30px;
 }
+
 .common .edscard-custom {
   border-radius: 10px;
   box-shadow: 0 0 45px var(--bshadow);
   transition: all 0.3s ease;
-  padding: 20px 30px 35px 30px;
+  padding: 20px 30px 35px;
 }
+
 .common .edscard-custom-pretitle, .common .edsteaser-custom-pretitle, .common .testimonal-slide-pretitle {
   color: var(--bluecol);
   font-size: calc(var(--font) + 2px);
 }
+
 .common .edscard-custom-title, .common .edsteaser-custom-title, .common .testimonal-slide-title {
   line-height: 50px;
   font-size: calc(var(--font) + 20px);
-  padding: 10px 0px 15px 0px;
-  margin: 0px;
+  padding: 10px 0 15px;
+  margin: 0;
   color: var(--btnhover);
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .common .edscard-custom-title, .common .edsteaser-custom-title, .common .testimonal-slide-title {
     font-size: calc(var(--font) + 13px);
     line-height: 35px;
   }
 }
+
 .common .edscard-custom-cardtitle, .common .edsteaser-custom-cardtitle, .common .testimonal-slide-cardtitle {
   font-size: calc(var(--font) + 5px);
   margin-bottom: 10px;
   line-height: 25px;
   color: var(--btnhover);
 }
+
 .common .edscard-custom-description, .common .edscard-custom-titledescription, .common .edsteaser-custom-description, .common .edsteaser-custom-titledescription, .common .testimonal-slide-description, .common .testimonal-slide-titledescription {
   line-height: 25px;
   color: var(--des);
@@ -82,35 +97,40 @@
 }
 
 .fundamental {
-  padding: 0px 50px 45px 60px;
+  padding: 0 50px 45px 60px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .fundamental {
     flex-direction: column;
-    padding: 0px 20px;
+    padding: 0 20px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .fundamental {
     flex-wrap: wrap;
-    padding: 0px 50px 0px 60px;
+    padding: 0 50px 0 60px;
   }
 }
+
 .fundamental .edscard-custom {
-  margin: -100px 0px 0px 0px;
+  margin: -100px 0 0;
   display: flex;
   background-color: var(--white);
   gap: 10px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .fundamental .edscard-custom {
-    margin: 10px 0px 0px 0px;
+    margin: 10px 0 0;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .fundamental .edscard-custom {
     width: 250px;
-    margin-top: 0px;
+    margin-top: 0;
   }
 }
 
@@ -118,250 +138,296 @@
   padding: 10px 40px;
   flex-wrap: wrap;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .service {
-    padding: 0px 20px;
+    padding: 0 20px;
     gap: 15px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .service {
-    padding: 20px 30px 20px 30px;
+    padding: 20px 30px;
   }
 }
+
 .service .edscard {
-  padding: 0px;
+  padding: 0;
 }
+
 .service .edscard-custom {
   display: flex;
   align-items: center;
-  padding: 32px 30px 50px 30px;
+  padding: 32px 30px 50px;
   width: 25%;
   text-align: center;
   flex-direction: column;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .service .edscard-custom {
     width: 100%;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .service .edscard-custom {
     width: 35%;
   }
 }
+
 .service .edscard-custom-img {
   width: 60px !important;
   height: auto;
 }
+
 .service .edscard-custom-cardtitle {
-  margin: 0px 0px 10px 0px;
+  margin: 0 0 10px;
 }
 
 .blog {
   padding: 30px 9%;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .blog {
     flex-direction: column;
-    padding: 0px 20px;
+    padding: 0 20px;
     gap: 15px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .blog {
     flex-direction: column;
   }
 }
+
 .blog .edscard-custom {
-  padding: 0px;
-  border-radius: 0px;
+  padding: 0;
+  border-radius: 0;
   text-align: left !important;
 }
+
 .blog .edscard-custom-blogtitle {
   display: flex;
   color: var(--des);
   font-size: calc(var(--font) + 2px);
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .blog .edscard-custom-blogtitle {
     font-size: calc(var(--font) - 1px);
   }
 }
+
 .blog .edscard-custom-blogtitle .icon {
   height: 17px;
   width: 20px;
-  margin: 0px 9px 0px 0px;
+  margin: 0 9px 0 0;
 }
+
 .blog .edscard-custom .edscard-custom-img {
   width: 100%;
-  margin: 0px;
+  margin: 0;
 }
+
 .blog .edscard-custom-cardcontent {
-  padding: 15px 30px 30px 30px;
+  padding: 15px 30px 30px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .blog .edscard-custom-cardcontent {
     padding: 15px 17px 30px 20px;
   }
 }
+
 .blog .edscard-custom-description {
-  margin: 20px 0px 30px 0px;
+  margin: 20px 0 30px;
 }
+
 .blog .edscard-custom-cardtitle {
-  margin: 25px 0px 0px 0px;
+  margin: 25px 0 0;
 }
+
 .blog .edscard-custom-ctbtn {
-  padding: 5px 30px 10px 30px;
+  padding: 5px 30px 10px;
   border: 1px solid var(--bluecol);
-  width: -moz-fit-content;
   width: fit-content;
 }
+
 .blog .edscard-custom-ctbtn a {
   color: var(--btnhover);
   font-size: var(--font);
 }
+
 .blog .edscard-custom .is-clamped {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
+
 .blog .edscard-custom .is-expanded {
   -webkit-line-clamp: unset;
   overflow: visible;
 }
 
 .member-section {
-  padding: 70px 0px 90px 0px;
+  padding: 70px 0 90px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .member-section {
-    padding: 30px 0px;
+    padding: 30px 0;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .member-section {
-    padding: 50px 0px;
+    padding: 50px 0;
   }
 }
+
 .member-section .default-content-wrapper {
-  padding: 0px 23% 40px 23%;
+  padding: 0 23% 40px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .member-section .default-content-wrapper {
-    padding: 0px 15px;
+    padding: 0 15px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .member-section .default-content-wrapper {
-    padding: 0px 7% 10px 7%;
+    padding: 0 7% 10px;
   }
 }
+
 .member-section .default-content-wrapper .pretitle, .member-section .default-content-wrapper .title, .member-section .default-content-wrapper .description {
   color: var(--white);
 }
 
 .member {
   position: relative;
-  padding: 0px 95px 70px 95px;
-  margin: 0px 20px;
+  padding: 0 95px 70px;
+  margin: 0 20px;
   background: none;
 }
+
 .member::before {
   content: "";
   position: absolute;
   inset: 0;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .member {
-    padding: 0px 9% 50px 9%;
+    padding: 0 9% 50px;
     flex-direction: column;
   }
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .member {
     flex-direction: column;
-    padding: 0px 20px;
+    padding: 0 20px;
     gap: 15px;
   }
 }
+
 .member .edscard-member-cards {
   display: flex;
   gap: 20px;
 }
+
 .member .edscard-custom {
-  padding: 0px;
-  border-radius: 0px;
+  padding: 0;
+  border-radius: 0;
   box-shadow: none;
   background: var(--white);
   text-align: center;
 }
+
 .member .edscard-custom .edscard-custom-img {
   width: 100%;
-  margin: 0px;
+  margin: 0;
 }
+
 .member .edscard-custom .icon {
   border: 1px solid var(--iborder);
   border-radius: 50%;
-  padding: 7px 8px 8px 8px;
+  padding: 7px 8px 8px;
   margin-right: 8px;
 }
+
 .member .edscard-custom .icon img {
   width: 16px;
   height: 16px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .member .edscard-custom .icon img {
     width: 20px;
     height: 13px;
   }
 }
+
 .member .edscard-custom .edscard-custom-cardcontent {
-  padding: 10px 0px 30px 0px;
+  padding: 10px 0 30px;
 }
+
 .member .edscard-custom .edscard-custom-cardcontent p {
   display: flex;
   justify-content: center;
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .member .edscard-custom .edscard-custom-cardcontent h3 {
     font-size: calc(var(--font) + 15px);
   }
 }
 
 .choose {
-  padding: 40px 55px 0px 55px;
+  padding: 40px 55px 0;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .choose {
     flex-direction: column;
-    padding: 0px 20px;
+    padding: 0 20px;
     gap: 15px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .choose {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     gap: 15px;
     flex-wrap: wrap;
   }
 }
+
 .choose .edscard-custom {
   display: flex;
   align-items: center;
-  padding: 0px 70px 10px 70px;
+  padding: 0 70px 10px;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .choose .edscard-custom {
-    padding: 0px 20px;
+    padding: 0 20px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .choose .edscard-custom {
-    padding: 0px 20px 0px 20px;
+    padding: 0 20px;
   }
 }
+
 .choose .edscard-custom .icon {
   width: 50px;
   height: 50px;
@@ -370,35 +436,41 @@
   background: var(--white);
   padding: 10px 8px 10px 10px;
 }
+
 .choose .edscard-custom .icon img {
   border-radius: 50%;
-  margin: 0px;
+  margin: 0;
 }
+
 .choose .edscard-custom:hover {
   background: var(--bluecol);
   transition: all 0.3s ease;
 }
+
 .choose .edscard-custom:hover .edscard-custom-cardtitle, .choose .edscard-custom:hover .edscard-custom-description {
   color: var(--white);
 }
 
 .process {
-  padding: 10px 55px 0px 55px;
+  padding: 10px 55px 0;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .process {
     flex-direction: column;
-    padding: 0px 20px;
+    padding: 0 20px;
     gap: 15px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .process {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     gap: 15px;
     flex-wrap: wrap;
   }
 }
+
 .process .edscard-custom {
   display: flex;
   align-items: center;
@@ -406,20 +478,24 @@
   padding: 30px 45px;
   box-shadow: none !important;
 }
-@media (min-width: 320px) and (max-width: 767px) {
+
+@media (width >= 320px) and (width <= 767px) {
   .process .edscard-custom {
     padding: 10px 20px;
   }
 }
-@media (min-width: 768px) and (max-width: 1024px) {
+
+@media (width >= 768px) and (width <= 1024px) {
   .process .edscard-custom {
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     width: 200px;
   }
 }
+
 .process .edscard-custom-cardcontent {
   text-align: center;
 }
+
 .process .edscard-custom .edscard-custom-img {
   border-radius: 50%;
   width: 95px;
@@ -429,11 +505,13 @@
   align-items: center;
   justify-content: center;
 }
+
 .process .edscard-custom .edscard-custom-img picture {
   display: flex;
 }
+
 .process .edscard-custom .edscard-custom-img img {
   width: 40px;
   height: 40px;
-  margin: 0px;
+  margin: 0;
 }/*# sourceMappingURL=edscard.css.map */
