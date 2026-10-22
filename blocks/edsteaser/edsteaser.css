@@ -1,33 +1,5 @@
 @charset "UTF-8";
 
-@font-face {
-  font-family: Livvic;
-  src: url("../../fonts/Livvic-Bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Livvic;
-  src: url("../../fonts/Livvic-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Livvic;
-  src: url("../../fonts/Livvic-Regular.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
-  font-family: Livvic, sans-serif !important;
-}
-
 .edsteaser-container .edsteaser-wrapper {
   max-width: none;
   margin: 0;
@@ -46,12 +18,19 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   }
 }
 
+@media (width >= 768px) and (width <= 1024px) {
+  .edsteaser-container .edsteaser-wrapper .edsteaser-custom {
+    flex-direction: column;
+    row-gap: 25px;
+  }
+}
+
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-img {
   width: 100%;
 }
 
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-pretitle {
-  color: #14b0bc;
+  color: var(--bluecol);
 }
 
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-content {
@@ -66,8 +45,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn {
-  background: #14b0bc;
-  color: #fff;
+  background: var(--bluecol);
+  color: var(--white);
   margin-right: 15px;
   font-weight: bold;
   padding: 15px 35px;
@@ -76,15 +55,15 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn a {
-  color: #fff;
-  font-size: 17px;
+  color: var(--white);
+  font-size: var(--font)2px;
   text-transform: capitalize;
   text-decoration: none;
 }
 
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn:hover {
-  color: #fff;
-  background-color: #030826;
+  color: var(--white);
+  background-color: var(--btnhover);
 }
 
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn:active, .edsteaser-container .edsteaser-wrapper .edsteaser-custom-btn:focus {
@@ -93,12 +72,12 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 
 .edsteaser-container .edsteaser-wrapper .edsteaser-custom-description {
   line-height: 25px;
-  color: #929292;
-  font-size: 17px;
+  color: var(--des);
+  font-size: var(--font)2px;
 }
 
 .stratergy {
-  padding: 40px 60px;
+  padding: 0 80px 40px;
 }
 
 @media (width >= 320px) and (width <= 767px) {
@@ -109,31 +88,31 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 
 @media (width >= 768px) and (width <= 1020px) {
   .stratergy {
-    padding: 30px 25px;
+    padding: 0 35px;
   }
 }
 
 .stratergy .edsteaser-custom {
-  padding: 40px;
-  border: 1px solid #dfdddd;
+  padding: 90px 65px;
+  border: 1px solid #cdcdcd;
 }
 
 @media (width >= 768px) and (width <= 1020px) {
   .stratergy .edsteaser-custom {
-    padding: 20px 20px 20px 0;
+    padding: 25px;
   }
 }
 
 .stratergy .edsteaser-custom-ul {
   list-style: none;
   line-height: 25px;
-  color: #929292;
-  font-size: 17px;
+  color: var(--des);
+  font-size: var(--font)2px;
   display: unset !important;
 }
 
 .stratergy .edsteaser-custom-ul li {
-  width: 100% !important;
+  width: 100%;
   position: relative;
   padding: 0 0 0 35px;
 }
@@ -147,31 +126,53 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 .stratergy .edsteaser-custom-ul li::before {
   content: "✓";
   position: absolute;
-  left: 0 !important;
-  color: #14b0bc !important;
-  background-color: transparent !important;
+  left: 0;
+  color: var(--bluecol);
+  background-color: transparent;
 }
 
-.member .edscard-custom-carddiv {
-  padding: 0 20px 30px;
-  gap: 50px !important;
+@media (width >= 768px) and (width <= 1024px) {
+  .stratergy .edsteaser-custom-content {
+    padding: 0 10px !important;
+  }
 }
 
-.member .edscard-custom-carddiv .edstitlecard-custom {
-  background: #fff;
-  padding: 0 !important;
+.stratergy .edsteaser-custom .edsteaser-custom-btn {
+  margin-top: 35px;
 }
 
-.member .edscard-custom-titlediv .edstitlecard-custom-pretitle, .member .edscard-custom-titlediv .edstitlecard-custom-title, .member .edscard-custom-titlediv .edstitlecard-custom-titledescription {
-  color: #fff;
+.purchase {
+  padding: 25px 50px 50px 65px;
+}
+
+@media (width >= 320px) and (width <= 767px) {
+  .purchase {
+    padding: 0 0 25px 10px;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .purchase {
+    padding: 0 50px 50px 65px;
+  }
+}
+
+.purchase .edsteaser-custom .edsteaser-custom-content {
+  padding: 0 10px 0 30px;
+}
+
+@media (width >= 320px) and (width <= 767px) {
+  .purchase .edsteaser-custom .edsteaser-custom-content {
+    padding: 0 10px 0 0;
+  }
 }
 
 .purchase .edsteaser-custom-ul {
   list-style: none;
   padding: 15px 0 0 35px;
   line-height: 25px;
-  color: #929292;
-  font-size: 17px;
+  color: var(--des);
+  font-size: var(--font)2px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px 90px;
@@ -206,20 +207,28 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   left: -32px;
   top: 0;
   width: 22px;
-  font-size: 15px;
-  color: #fff;
+  font-size: var(--font);
+  color: var(--white);
   font-weight: bold;
   height: 22px;
   border-radius: 50%;
-  background-color: #14b0bc;
+  background-color: var(--bluecol);
   text-align: center;
+}
+
+.purchase .edsteaser-custom .edsteaser-custom-btn {
+  margin-top: 30px;
+}
+
+.purchase .edsteaser-custom .edsteaser-custom-img img {
+  width: 100%;
 }
 
 .solution .edsteaser-custom-img img {
   width: 100%;
      object-position: top right;
   height: 600px;
-     object-fit: none;
+     object-fit: cover;
 }
 
 @media (width >= 320px) and (width <= 767px) {
@@ -230,13 +239,21 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .solution .edsteaser-custom .edsteaser-custom-content {
-  width: 75%;
-  padding: 25px 70px 0 35px;
+  width: 90%;
+  padding: 50px 70px 0 35px;
 }
 
 @media (width >= 320px) and (width <= 767px) {
   .solution .edsteaser-custom .edsteaser-custom-content {
-    padding: 0 30px;
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .solution .edsteaser-custom .edsteaser-custom-content {
+    padding: 50px 35px 0;
+    width: 90%;
   }
 }
 
@@ -247,6 +264,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 
 .solution .edsteaser-custom-description {
   margin: 0 0 25px;
+  padding: 0 30px 0 0;
 }
 
 .solution .edsteaser-custom .edsteaser-progress {
@@ -254,6 +272,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   display: flex;
   flex-direction: column;
   gap: 15px;
+  padding: 0 80px 0 0;
 }
 
 .solution .edsteaser-custom .edsteaser-progress-header {
@@ -262,14 +281,14 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   align-items: center;
   margin-bottom: 8px;
   font-weight: 700;
-  font-size: 16px;
+  font-size: calc(var(--font) + 1px);
 }
 
 .solution .edsteaser-custom .edsteaser-progress-track {
   position: relative;
   width: 100%;
   height: 6px;
-  background-color: #dfdddd;
+  background-color: #eaeaea;
   border-radius: 4px;
   margin-top: 10px;
 }
@@ -277,7 +296,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 .solution .edsteaser-custom .edsteaser-progress-bar-fill {
   height: 100%;
   width: 0%;
-  background-color: #14b0bc;
+  background-color: var(--bluecol);
   border-radius: 4px;
   transition: width 1.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
@@ -289,6 +308,6 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   transform: translateX(-50%);
   margin-bottom: 4px;
   font-weight: 700;
-  font-size: 14px;
+  font-size: calc(var(--font) - 1px);
   white-space: nowrap;
 }/*# sourceMappingURL=edsteaser.css.map */

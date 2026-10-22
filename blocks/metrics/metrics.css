@@ -1,39 +1,11 @@
-@font-face {
-  font-family: Livvic;
-  src: url("../../fonts/Livvic-Bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Livvic;
-  src: url("../../fonts/Livvic-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Livvic;
-  src: url("../../fonts/Livvic-Regular.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
-  font-family: Livvic, sans-serif !important;
-}
-
 .metrics-container {
-  background-color: #14b0bc;
+  background-color: var(--bluecol);
 }
 
 .metrics-container .metrics-wrapper .metrics {
   display: flex;
-  gap: 60px;
-  padding: 30px 0;
+  gap: 90px;
+  padding: 70px 0 80px;
   align-items: center;
   justify-content: center;
 }
@@ -47,7 +19,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 
 @media (width >= 768px) and (width <= 1024px) {
   .metrics-container .metrics-wrapper .metrics {
-    gap: 30px;
+    flex-wrap: wrap;
+    padding: 30px 5%;
+    row-gap: 35px;
   }
 }
 
@@ -59,20 +33,21 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .metrics-container .metrics-wrapper .metrics-custom-title {
-  font-size: 35px;
+  font-size: calc(var(--font) + 20px);
+  font-weight: bold;
   margin: 10px 0 0;
-  color: #fff;
+  color: var(--white);
 }
 
 @media (width >= 768px) and (width <= 1024px) {
   .metrics-container .metrics-wrapper .metrics-custom-title {
-    font-size: 31px;
+    font-size: calc(var(--font) + 16px);
   }
 }
 
 .metrics-container .metrics-wrapper .metrics-custom-description {
-  font-size: 17px;
-  color: #fff;
+  font-size: 15px;
+  color: var(--white);
 }
 
 @media (width >= 768px) and (width <= 1024px) {
@@ -82,8 +57,8 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .metrics-container .metrics-wrapper .metrics-custom-img {
-  width: 45px;
-  height: 45px;
+  width: 43px;
+  height: 43px;
 }
 
 @media (width >= 768px) and (width <= 1024px) {

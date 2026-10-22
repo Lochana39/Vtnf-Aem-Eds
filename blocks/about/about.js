@@ -1,98 +1,58 @@
 export default function decorate(block) {
   const rows = [...block.children];
-  const heroImg = rows[0].querySelector('img');
-  const heroWrapper = document.createElement('div');
-  heroWrapper.className = 'about-hero-bg';
-  if (heroImg) {
-    heroImg.className = 'about-hero-img';
-    heroWrapper.append(heroImg);
+
+  // row 1 -> background image of the about section
+  const bg = rows[0].querySelector('img');
+  const section = block.closest('.about-container');
+  if (bg) {
+    section.style.backgroundImage = `url(${bg.src})`;
+    section.style.backgroundRepeat = 'no-repeat';
   }
-  rows[0]?.remove();
-  const pre = rows[1].querySelector('h4');
-  const title = rows[1].querySelector('h2');
-  const list = rows[1].querySelector('ul');
+  rows[0].remove();
 
-  pre.className = 'about-pretitle';
-  title.className = 'about-title';
+  // header
+  const header = rows[1].firstElementChild;
+  header.className = 'about-header';
+  header.querySelector('h4').className = 'about-pretitle';
+  header.querySelector('h2').className = 'about-title';
+  const tabList = header.querySelector('ul');
+  tabList.className = 'about-tabs';
 
-  const tabButtons = [];
-  const tabNav = document.createElement('div');
-  tabNav.className = 'about-buttons';
-
-  if (list) {
-    [...list.children].forEach((li, i) => {
-      const btn = document.createElement('button');
-      btn.type = 'button';
-      btn.className = 'about-tab-btn';
-      btn.textContent = li.textContent.trim();
-      if (i === 0) btn.classList.add('is-active');
-      tabButtons.push(btn);
-      tabNav.append(btn);
-    });
-  }
-
-  const introWrapper = document.createElement('div');
-  introWrapper.className = 'about-content';
-  if (pre) introWrapper.append(pre);
-  if (title) introWrapper.append(title);
-  introWrapper.append(tabNav);
-  rows[1]?.remove();
-
-  const remainingRows = rows.slice(2);
-  const usableRows = remainingRows.filter((row) => row.querySelector('picture, p'));
-  const galleryRow = usableRows[0];
-  const galleryPanel = document.createElement('div');
-  galleryPanel.className = 'about-panel about-panel-gallery is-active';
-
-  if (galleryRow) {
-    galleryRow.querySelectorAll('picture img').forEach((img) => {
-      img.className = 'about-gallery-img';
-    });
-    [...galleryRow.children].forEach((col) => {
-      col.classList.add('about-gallery-item');
-      galleryPanel.append(col);
-    });
-  }
-
-  const contentRows = usableRows.slice(1);
-  const contentPanels = contentRows.map((row) => {
-    const panel = document.createElement('div');
-    panel.className = 'about-panel about-panel-content';
-    const picture = row.querySelector('picture');
-    if (picture) {
-      const mediaWrapper = document.createElement('div');
-      mediaWrapper.className = 'about-panel-media';
-      const img = picture.querySelector('img');
-      if (img) img.className = 'about-panel-img';
-      mediaWrapper.append(picture);
-      panel.append(mediaWrapper);
-    }
-    const textWrapper = document.createElement('div');
-    textWrapper.className = 'about-panel-text';
-    row.querySelectorAll('p').forEach((p) => {
-      if (!p.querySelector('picture')) {
-        p.classList.add('about-panel-paragraph');
-        textWrapper.append(p);
-      }
-    });
-    if (textWrapper.children.length) panel.append(textWrapper);
-
-    return panel;
+  const tabs = [...tabList.children].map((li) => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'about-tab';
+    btn.textContent = li.textContent.trim();
+    li.replaceChildren(btn);
+    return btn;
   });
 
-  remainingRows.forEach((row) => row.remove());
-  const panelsWrapper = document.createElement('div');
-  panelsWrapper.className = 'about-panels';
-  panelsWrapper.append(galleryPanel, ...contentPanels);
-  const allPanels = [galleryPanel, ...contentPanels];
+  // items (rows without a picture are skipped)
+  const items = document.createElement('div');
+  items.className = 'about-items about-items--all';
 
-  block.append(heroWrapper, introWrapper, panelsWrapper);
-  tabButtons.forEach((btn, i) => {
-    btn.addEventListener('click', () => {
-      tabButtons.forEach((b) => b.classList.remove('is-active'));
-      allPanels.forEach((p) => p.classList.remove('is-active'));
-      btn.classList.add('is-active');
-      allPanels[i]?.classList.add('is-active');
+  const cards = rows
+    .slice(2)
+    .filter((row) => row.querySelector('picture'))
+    .map((row) => {
+      const [imgCell, textCell] = row.children;
+      const item = document.createElement('div');
+      item.className = 'about-item';
+      textCell.className = 'about-text';
+      item.append(imgCell.querySelector('picture'), textCell);
+      return item;
     });
-  });
+  items.append(...cards);
+
+  // tab switching
+  const show = (index) => {
+    tabs.forEach((tab, i) => tab.classList.toggle('about-tab--active', i === index));
+    items.classList.toggle('about-items--all', index === 0);
+    cards.forEach((card, i) => card.classList.toggle('about-item--active', i === index - 1));
+  };
+
+  tabs.forEach((tab, i) => tab.addEventListener('click', () => show(i)));
+  show(0);
+
+  block.replaceChildren(header, items);
 }

@@ -1,31 +1,3 @@
-@font-face {
-  font-family: Livvic;
-  src: url("../../fonts/Livvic-Bold.woff2") format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Livvic;
-  src: url("../../fonts/Livvic-Medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: Livvic;
-  src: url("../../fonts/Livvic-Regular.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
-  font-family: Livvic, sans-serif !important;
-}
-
 .edscard-container {
   margin: 0 !important;
 }
@@ -35,47 +7,39 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .edscard-container .default-content-wrapper .pretitle {
-  color: #14b0bc;
-  font-size: 17px;
+  color: var(--bluecol);
+  font-size: calc(var(--font) + 2px);
 }
 
 .edscard-container .default-content-wrapper .title {
   line-height: 50px;
-  font-size: 35px;
+  font-size: calc(var(--font) + 20px);
   padding: 10px 0 15px;
   margin: 0;
-  color: #030826;
+  color: var(--btnhover);
 }
 
 @media (width >= 320px) and (width <= 767px) {
   .edscard-container .default-content-wrapper .title {
-    font-size: 27px;
+    font-size: calc(var(--font) + 12px);
     line-height: 35px;
   }
 }
 
 .edscard-container .default-content-wrapper .description {
   line-height: 25px;
-  color: #929292;
-  font-size: 17px;
+  color: var(--des);
+  font-size: calc(var(--font) + 2px);
 }
 
 .edscard-container .edscard-wrapper {
-  padding: 0;
+  padding: 35px 0;
+  max-width: none;
 }
 
 .edscard-container .edscard-wrapper .edscard {
   display: flex;
-  padding: 0 55px 45px;
-  gap: 30px;
   justify-content: center;
-}
-
-.edscard-container .edscard-wrapper .edscard-custom {
-  border-radius: 10px;
-  box-shadow: 0 0 45px #e9ebf3;
-  transition: all 0.3s ease;
-  padding: 20px 30px 35px;
 }
 
 .edscard-container .edscard-wrapper .edscard-custom:hover {
@@ -85,62 +49,75 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 .edscard-container .edscard-wrapper .edscard-custom-img {
   width: 115px;
   height: auto;
-  margin: 20px 0 5px;
+  margin: 10px 0 5px;
 }
 
-.common .edscard-custom-pretitle, .common .edsteaser-custom-pretitle, .common .edstitlecard-custom-pretitle, .common .testimonal-slide-pretitle {
-  color: #14b0bc;
-  font-size: 17px;
+.common {
+  gap: 30px;
 }
 
-.common .edscard-custom-title, .common .edsteaser-custom-title, .common .edstitlecard-custom-title, .common .testimonal-slide-title {
+.common .edscard-custom {
+  border-radius: 10px;
+  box-shadow: 0 0 45px var(--bshadow);
+  transition: all 0.3s ease;
+  padding: 20px 30px 35px;
+}
+
+.common .edscard-custom-pretitle, .common .edsteaser-custom-pretitle, .common .testimonal-slide-pretitle {
+  color: var(--bluecol);
+  font-size: calc(var(--font) + 2px);
+}
+
+.common .edscard-custom-title, .common .edsteaser-custom-title, .common .testimonal-slide-title {
   line-height: 50px;
-  font-size: 35px;
+  font-size: calc(var(--font) + 20px);
   padding: 10px 0 15px;
   margin: 0;
-  color: #030826;
+  color: var(--btnhover);
 }
 
 @media (width >= 320px) and (width <= 767px) {
-  .common .edscard-custom-title, .common .edsteaser-custom-title, .common .edstitlecard-custom-title, .common .testimonal-slide-title {
-    font-size: 28px;
+  .common .edscard-custom-title, .common .edsteaser-custom-title, .common .testimonal-slide-title {
+    font-size: calc(var(--font) + 13px);
     line-height: 35px;
   }
 }
 
-.common .edscard-custom-cardtitle, .common .edsteaser-custom-cardtitle, .common .edstitlecard-custom-cardtitle, .common .testimonal-slide-cardtitle {
-  font-size: 20px;
+.common .edscard-custom-cardtitle, .common .edsteaser-custom-cardtitle, .common .testimonal-slide-cardtitle {
+  font-size: calc(var(--font) + 5px);
   margin-bottom: 10px;
   line-height: 25px;
-  color: #030826;
+  color: var(--btnhover);
 }
 
-.common .edscard-custom-description, .common .edscard-custom-titledescription, .common .edsteaser-custom-description, .common .edsteaser-custom-titledescription, .common .edstitlecard-custom-description, .common .edstitlecard-custom-titledescription, .common .testimonal-slide-description, .common .testimonal-slide-titledescription {
+.common .edscard-custom-description, .common .edscard-custom-titledescription, .common .edsteaser-custom-description, .common .edsteaser-custom-titledescription, .common .testimonal-slide-description, .common .testimonal-slide-titledescription {
   line-height: 25px;
-  color: #929292;
-  font-size: 17px;
+  color: var(--des);
+  font-size: calc(var(--font) + 2px);
+}
+
+.fundamental {
+  padding: 0 50px 45px 60px;
 }
 
 @media (width >= 320px) and (width <= 767px) {
   .fundamental {
     flex-direction: column;
-    padding: 0 20px !important;
-    gap: 15px !important;
+    padding: 0 20px;
   }
 }
 
 @media (width >= 768px) and (width <= 1024px) {
   .fundamental {
-    gap: 20px !important;
-    padding: 0 20px 20px !important;
     flex-wrap: wrap;
+    padding: 0 50px 0 60px;
   }
 }
 
 .fundamental .edscard-custom {
-  margin: -60px 0 0;
+  margin: -100px 0 0;
   display: flex;
-  background-color: #fff;
+  background-color: var(--white);
   gap: 10px;
 }
 
@@ -152,27 +129,26 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 
 @media (width >= 768px) and (width <= 1024px) {
   .fundamental .edscard-custom {
-    width: 200px;
+    width: 250px;
     margin-top: 0;
   }
 }
 
 .service {
-  display: unset;
+  padding: 10px 40px;
   flex-wrap: wrap;
 }
 
 @media (width >= 320px) and (width <= 767px) {
   .service {
-    padding: 0 20px !important;
-    gap: 15px !important;
+    padding: 0 20px;
+    gap: 15px;
   }
 }
 
 @media (width >= 768px) and (width <= 1024px) {
   .service {
-    padding: 20px 30px !important;
-    gap: 20px !important;
+    padding: 20px 30px;
   }
 }
 
@@ -183,6 +159,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 .service .edscard-custom {
   display: flex;
   align-items: center;
+  padding: 32px 30px 50px;
   width: 25%;
   text-align: center;
   flex-direction: column;
@@ -191,6 +168,12 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 @media (width >= 320px) and (width <= 767px) {
   .service .edscard-custom {
     width: 100%;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .service .edscard-custom {
+    width: 35%;
   }
 }
 
@@ -204,40 +187,39 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .blog {
-  padding: 30px 55px !important;
+  padding: 30px 9%;
 }
 
 @media (width >= 320px) and (width <= 767px) {
   .blog {
     flex-direction: column;
-    padding: 0 20px !important;
-    gap: 15px !important;
+    padding: 0 20px;
+    gap: 15px;
   }
 }
 
 @media (width >= 768px) and (width <= 1024px) {
   .blog {
-    padding: 20px 25px !important;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
 }
 
 .blog .edscard-custom {
-  padding: 0 !important;
-  border-radius: 0 !important;
+  padding: 0;
+  border-radius: 0;
   text-align: left !important;
-}
-
-@media (width >= 768px) and (width <= 1024px) {
-  .blog .edscard-custom {
-    width: 260px;
-  }
 }
 
 .blog .edscard-custom-blogtitle {
   display: flex;
-  color: #929292;
-  font-size: 15px;
+  color: var(--des);
+  font-size: calc(var(--font) + 2px);
+}
+
+@media (width >= 320px) and (width <= 767px) {
+  .blog .edscard-custom-blogtitle {
+    font-size: calc(var(--font) - 1px);
+  }
 }
 
 .blog .edscard-custom-blogtitle .icon {
@@ -255,6 +237,12 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   padding: 15px 30px 30px;
 }
 
+@media (width >= 320px) and (width <= 767px) {
+  .blog .edscard-custom-cardcontent {
+    padding: 15px 17px 30px 20px;
+  }
+}
+
 .blog .edscard-custom-description {
   margin: 20px 0 30px;
 }
@@ -264,18 +252,42 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .blog .edscard-custom-ctbtn {
-  padding: 10px 30px;
-  border: 1px solid #14b0bc;
+  padding: 5px 30px 10px;
+  border: 1px solid var(--bluecol);
   width: fit-content;
 }
 
 .blog .edscard-custom-ctbtn a {
-  color: #030826;
-  font-size: 15px;
+  color: var(--btnhover);
+  font-size: var(--font);
+}
+
+.blog .edscard-custom .is-clamped {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.blog .edscard-custom .is-expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
 }
 
 .member-section {
-  padding: 40px 0;
+  padding: 70px 0 90px;
+}
+
+@media (width >= 320px) and (width <= 767px) {
+  .member-section {
+    padding: 30px 0;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .member-section {
+    padding: 50px 0;
+  }
 }
 
 .member-section .default-content-wrapper {
@@ -284,19 +296,25 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 
 @media (width >= 320px) and (width <= 767px) {
   .member-section .default-content-wrapper {
-    padding: 0 20px;
+    padding: 0 15px;
+  }
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .member-section .default-content-wrapper {
+    padding: 0 7% 10px;
   }
 }
 
 .member-section .default-content-wrapper .pretitle, .member-section .default-content-wrapper .title, .member-section .default-content-wrapper .description {
-  color: #fff;
+  color: var(--white);
 }
 
 .member {
   position: relative;
-  padding: 0 55px 70px !important;
-  overflow: hidden;
-  background: none !important;
+  padding: 0 95px 70px;
+  margin: 0 20px;
+  background: none;
 }
 
 .member::before {
@@ -307,15 +325,16 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 
 @media (width >= 768px) and (width <= 1024px) {
   .member {
-    padding: 0 20px 50px !important;
+    padding: 0 9% 50px;
+    flex-direction: column;
   }
 }
 
 @media (width >= 320px) and (width <= 767px) {
   .member {
     flex-direction: column;
-    padding: 0 20px !important;
-    gap: 15px !important;
+    padding: 0 20px;
+    gap: 15px;
   }
 }
 
@@ -325,11 +344,11 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .member .edscard-custom {
-  padding: 0 !important;
-  border-radius: 0 !important;
-  box-shadow: none !important;
-  background: #fff !important;
-  text-align: center !important;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background: var(--white);
+  text-align: center;
 }
 
 .member .edscard-custom .edscard-custom-img {
@@ -338,9 +357,9 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .member .edscard-custom .icon {
-  border: 1px solid #cdcdcd;
+  border: 1px solid var(--iborder);
   border-radius: 50%;
-  padding: 3px 7px 11px;
+  padding: 7px 8px 8px;
   margin-right: 8px;
 }
 
@@ -352,7 +371,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 @media (width >= 320px) and (width <= 767px) {
   .member .edscard-custom .icon img {
     width: 20px;
-    height: 25px;
+    height: 13px;
   }
 }
 
@@ -360,22 +379,33 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   padding: 10px 0 30px;
 }
 
+.member .edscard-custom .edscard-custom-cardcontent p {
+  display: flex;
+  justify-content: center;
+}
+
+@media (width >= 768px) and (width <= 1024px) {
+  .member .edscard-custom .edscard-custom-cardcontent h3 {
+    font-size: calc(var(--font) + 15px);
+  }
+}
+
 .choose {
-  padding: 40px 55px !important;
+  padding: 40px 55px 0;
 }
 
 @media (width >= 320px) and (width <= 767px) {
   .choose {
     flex-direction: column;
-    padding: 0 20px !important;
-    gap: 15px !important;
+    padding: 0 20px;
+    gap: 15px;
   }
 }
 
 @media (width >= 768px) and (width <= 1024px) {
   .choose {
-    padding: 20px !important;
-    gap: 15px !important;
+    padding: 20px;
+    gap: 15px;
     flex-wrap: wrap;
   }
 }
@@ -383,18 +413,18 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 .choose .edscard-custom {
   display: flex;
   align-items: center;
-  padding: 0 70px 10px !important;
+  padding: 0 70px 10px;
 }
 
 @media (width >= 320px) and (width <= 767px) {
   .choose .edscard-custom {
-    padding: 0 20px !important;
+    padding: 0 20px;
   }
 }
 
 @media (width >= 768px) and (width <= 1024px) {
   .choose .edscard-custom {
-    padding: 0 20px !important;
+    padding: 0 20px;
   }
 }
 
@@ -403,7 +433,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   height: 50px;
   margin-right: 10px;
   border-radius: 50%;
-  background: #fff;
+  background: var(--white);
   padding: 10px 8px 10px 10px;
 }
 
@@ -413,30 +443,30 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 }
 
 .choose .edscard-custom:hover {
-  background: #14b0bc;
+  background: var(--bluecol);
   transition: all 0.3s ease;
 }
 
 .choose .edscard-custom:hover .edscard-custom-cardtitle, .choose .edscard-custom:hover .edscard-custom-description {
-  color: #fff;
+  color: var(--white);
 }
 
 .process {
-  padding: 40px 55px !important;
+  padding: 10px 55px 0;
 }
 
 @media (width >= 320px) and (width <= 767px) {
   .process {
     flex-direction: column;
-    padding: 0 20px !important;
-    gap: 15px !important;
+    padding: 0 20px;
+    gap: 15px;
   }
 }
 
 @media (width >= 768px) and (width <= 1024px) {
   .process {
-    padding: 20px !important;
-    gap: 15px !important;
+    padding: 20px;
+    gap: 15px;
     flex-wrap: wrap;
   }
 }
@@ -445,19 +475,19 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 30px 35px !important;
+  padding: 30px 45px;
   box-shadow: none !important;
 }
 
 @media (width >= 320px) and (width <= 767px) {
   .process .edscard-custom {
-    padding: 10px 20px !important;
+    padding: 10px 20px;
   }
 }
 
 @media (width >= 768px) and (width <= 1024px) {
   .process .edscard-custom {
-    padding: 20px !important;
+    padding: 20px;
     width: 200px;
   }
 }
@@ -469,7 +499,7 @@ h1, h2, h3, h4, h5, h6, p, ul, li, a, span {
 .process .edscard-custom .edscard-custom-img {
   border-radius: 50%;
   width: 95px;
-  background: #14b0bc;
+  background: var(--bluecol);
   height: 95px;
   display: flex;
   align-items: center;

@@ -18,6 +18,14 @@ export default function decorate(block) {
     }
     cards[0].remove();
   }
+  // const list = document.createElement('dl');
+  // list.className = 'form-modal-list';
+  // list.hidden = true;
+
+  // toggleBtn.addEventListener('click', () => {
+  //   list.hidden = !list.hidden;
+  //   toggleBtn.textContent = list.hidden ? 'Show details' : 'Hide details';
+  // });
 
   cards.forEach((card) => {
     card.classList.add('edscard-custom');
@@ -37,5 +45,17 @@ export default function decorate(block) {
     blogtitle?.classList.add('edscard-custom-blogtitle');
     const pretitle = card.querySelector('h4');
     pretitle?.classList.add('edscard-custom-pretitle');
+
+    if (block.classList.contains('blog')) {
+      const link = ctbtn.querySelector('a');
+      description?.classList.add('is-clamped');
+
+      link?.addEventListener('click', (e) => {
+        e.preventDefault();
+        const expanded = description.classList.toggle('is-expanded');
+        description.classList.toggle('is-clamped', !expanded);
+        link.textContent = expanded ? 'Hide Details' : 'Read More';
+      });
+    }
   });
 }

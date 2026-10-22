@@ -1,11 +1,10 @@
-@import '../designsystem/variable.scss';
 .metrics-container{
-    background-color: $bluecol ;
+    background-color: var(--bluecol);
     .metrics-wrapper{
         .metrics {
             display: flex;
-            gap: 60px;
-            padding: 30px 0px;
+            gap: 90px;
+            padding: 70px 0px 80px 0px;
             align-items: center;
             justify-content: center;
             @media (min-width: 320px) and (max-width: 767px)
@@ -15,7 +14,9 @@
             }
             @media (min-width: 768px) and (max-width: 1024px)
             {
-                gap:30px;
+                flex-wrap: wrap;
+                padding: 30px 5%;
+                row-gap: 35px;
             }
             &-custom
             {
@@ -25,18 +26,20 @@
                 align-items: center;
                 &-title
                 {
-                    font-size: $font + 20px;
+                    // font-variant-numeric: tabular-nums;
+                    font-size: calc(var(--font) + 20px);
+                    font-weight: bold;
                     margin: 10px 0px 0px 0px;
-                    color: $white;
+                    color: var(--white);
                     @media (min-width: 768px) and (max-width: 1024px)
                     {
-                        font-size: $font + 16px;
+                        font-size: calc(var(--font) + 16px);
                     }
                 }
                 &-description
                 {
-                    font-size: 17px;
-                    color: $white;
+                    font-size: 15px;
+                    color: var(--white);
                     @media (min-width: 768px) and (max-width: 1024px)
                     {
                         margin:5px 0px;
@@ -44,8 +47,8 @@
                 }
                 &-img
                 {
-                    width:45px;
-                    height:45px;
+                    width:43px;
+                    height:43px;
                     @media (min-width: 768px) and (max-width: 1024px)
                     {
                         width: 35px;
