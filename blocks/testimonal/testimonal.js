@@ -54,7 +54,7 @@ export default function decorate(block) {
   // One dot for each slide
   slides.forEach(() => {
     const dot = document.createElement('button');
-    dot.className = 'dot';
+    dot.className = 'dots-div';
     dot.textContent = '';
     dots.appendChild(dot);
   });
@@ -63,7 +63,7 @@ export default function decorate(block) {
   block.append(prevBtn, nextBtn, dots);
 
   let currentSlide = 0;
-  const allDots = dots.querySelectorAll('.dot');
+  const allDots = dots.querySelectorAll('.dots-div');
 
   function updateSlider() {
     track.style.transform = `translateX(-${currentSlide * 100}%)`;

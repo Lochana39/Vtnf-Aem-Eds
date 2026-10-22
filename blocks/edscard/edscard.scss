@@ -1,4 +1,3 @@
-@import '../designsystem/variable.scss';
 .edscard-container{
   margin: 0px !important;
   .default-content-wrapper
@@ -6,49 +5,43 @@
     text-align:center;
     .pretitle
     {
-      color: $bluecol;
-      font-size: $font + 2px;
+      color: var(--bluecol);
+      font-size: calc(var(--font) + 2px);
     }
     .title
     {
       line-height:50px;
-      font-size: $font + 20px;
+      font-size: calc(var(--font) + 20px);
       padding:10px 0px 15px 0px;
       margin: 0px;
-      color: $btnhover;
+      color: var(--btnhover);
       @media (min-width: 320px) and (max-width: 767px)
       {
-        font-size: $font + 12px;
+        font-size: calc(var(--font) + 12px);
         line-height: 35px;
       }
     }
     .description
     {
       line-height: 25px;
-      color: $des;
-      font-size: $font + 2px;
+      color: var(--des);
+      font-size: calc(var(--font) + 2px);
     }
   }
   .edscard-wrapper{
-    padding: 0px;
+    padding:35px 0px;
+    max-width: none;
     .edscard {
       display: flex;
-      padding: 0px 55px 45px 55px;
-      gap: 30px;
       justify-content: center;
       &-custom{
-        border-radius: 10px;
-        box-shadow: 0 0 45px $bshadow;
-        transition: all .3s ease;
-        padding: 20px 30px 35px 30px;
-        
         &:hover {
           transform: translateY(-10px);
         }
         &-img{
           width: 115px;
           height: auto;
-          margin: 20px 0px 5px 0px;
+          margin: 10px 0px 5px 0px;
         }
       }
     }
@@ -56,58 +49,65 @@
 }
 .common
 {
-  .edscard-custom,.edsteaser-custom,.edstitlecard-custom,.testimonal-slide
+  gap:30px;
+  .edscard-custom
+  {
+    border-radius: 10px;
+    box-shadow: 0 0 45px var(--bshadow);
+    transition: all .3s ease;
+    padding: 20px 30px 35px 30px;
+  }
+  .edscard-custom,.edsteaser-custom,.testimonal-slide
   {
     &-pretitle
     {
-      color: $bluecol;
-      font-size: $font + 2px;
+      color: var(--bluecol);
+      font-size: calc(var(--font) + 2px);
     }
     &-title
     {
       line-height:50px;
-      font-size: $font + 20px;
+      font-size: calc(var(--font) + 20px);
       padding:10px 0px 15px 0px;
       margin: 0px;
-      color: $btnhover;
+      color: var(--btnhover);
       @media (min-width: 320px) and (max-width: 767px)
       {
-        font-size: $font + 13px;
+        font-size: calc(var(--font) + 13px);
         line-height: 35px;
       }
     }
     &-cardtitle
     {
-      font-size: $font + 5px;
+      font-size: calc(var(--font) + 5px);
       margin-bottom: 10px;
       line-height: 25px;
-      color: $btnhover;
+      color: var(--btnhover);
     }
     &-description,&-titledescription
     {
       line-height: 25px;
-      color: $des;
-      font-size: $font + 2px;
+      color: var(--des);
+      font-size: calc(var(--font) + 2px);
     }
   }
 }
 .fundamental{
+  padding: 0px 50px 45px 60px;
   @media (min-width: 320px) and (max-width: 767px)
   {
     flex-direction: column;
-    padding: 0px 20px !important;
-    gap: 15px !important;
+    padding: 0px 20px;
   }
   @media (min-width: 768px) and (max-width: 1024px)
   {
-    gap:20px !important;
-    padding: 0px 20px 20px 20px !important;
     flex-wrap: wrap;
+    padding : 0px 50px 0px 60px;
   }
   .edscard-custom{
-    margin: -60px 0px 0px 0px;
+    margin: -100px 0px 0px 0px;
     display: flex;
-    background-color: $white;
+    background-color: var(--white);
     gap: 10px;
     @media (min-width: 320px) and (max-width: 767px)
     {
@@ -115,37 +115,41 @@
     }
     @media (min-width: 768px) and (max-width: 1024px)
     {
-      width: 200px;
+      width: 250px;
       margin-top: 0px;
     }
   }
 }
 .service
 {
-  display:unset;
+  padding:10px 40px;
   flex-wrap:wrap;
   @media (min-width: 320px) and (max-width: 767px)
   {
-    padding: 0px 20px !important;
-    gap: 15px !important;
+    padding: 0px 20px;
+    gap: 15px;
   }
   @media (min-width: 768px) and (max-width: 1024px)
   {
-    padding: 20px 30px 20px 30px !important;
-    gap:20px !important;
-  }
+    padding: 20px 30px 20px 30px;
+  } 
   .edscard
   {
     padding: 0px;
     &-custom{
       display: flex;
       align-items: center;
+      padding: 32px 30px 50px 30px;
       width: 25%;
       text-align: center;
       flex-direction:column;
       @media (min-width: 320px) and (max-width: 767px)
       {
         width: 100%;
+      }
+      @media (min-width: 768px) and (max-width: 1024px)
+      {
+        width: 35%;
       }
       &-img{
         width: 60px !important;
@@ -161,31 +165,30 @@
 
 .blog
 {
-  padding:30px 55px !important;
+  padding:30px 9%;
   @media (min-width: 320px) and (max-width: 767px)
   {
     flex-direction: column;
-    padding: 0px 20px !important;
-    gap: 15px !important;
+    padding: 0px 20px ;
+    gap: 15px;
   }
   @media (min-width: 768px) and (max-width: 1024px)
   {
-    padding: 20px 25px !important;
-    flex-wrap: wrap;
+    flex-direction: column;
   }
   .edscard-custom{
-    padding:0px !important;
-    border-radius: 0px !important;
+    padding:0px;
+    border-radius: 0px;
     text-align:left !important;
-    @media (min-width: 768px) and (max-width: 1024px)
-    {
-      width: 260px;
-    }
     &-blogtitle
     {
       display:flex;
-      color: $des;
-      font-size: $font;
+      color: var(--des);
+      font-size: calc(var(--font) + 2px);
+      @media (min-width: 320px) and (max-width: 767px)
+      {
+        font-size: calc(var(--font) - 1px);
+      }
       .icon
       {
         height: 17px;
@@ -201,6 +204,10 @@
     &-cardcontent
     {
       padding:15px 30px 30px 30px;
+      @media (min-width: 320px) and (max-width: 767px)
+      {
+        padding: 15px 17px 30px 20px;
+      }
     }
     &-description
     {
@@ -212,39 +219,62 @@
     }
     &-ctbtn
     {
-      padding: 10px 30px;
-      border:1px solid $bluecol;
+      padding: 5px 30px 10px 30px;
+      border:1px solid var(--bluecol);
       width: fit-content;
       a
       {
-        color: $btnhover;
-        font-size: 15px;
+        color: var(--btnhover);
+        font-size: var(--font);
       }
     }
+    .is-clamped {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 2;
+      overflow: hidden;
+    }
+    .is-expanded {
+      -webkit-line-clamp: unset;
+      overflow: visible;
+    }
   }
+
 }
 .member-section
 {
-  padding:40px 0px;
+  padding:70px 0px 90px 0px;
+  @media (min-width: 320px) and (max-width: 767px)
+  {
+    padding:30px 0px; 
+  }
+  @media (min-width: 768px) and (max-width: 1024px)
+  {
+    padding: 50px 0px;
+  }
   .default-content-wrapper
   {
     padding: 0px 23% 40px 23%;
     @media (min-width: 320px) and (max-width: 767px)
     {
-      padding: 0px 20px;
+      padding: 0px 15px;
+    }
+    @media (min-width: 768px) and (max-width: 1024px)
+    {
+      padding: 0px 7% 10px 7%;
     }
     .pretitle,.title,.description
     {
-      color: $white;
+      color: var(--white);
     }
   }
 }
 .member
 {
   position: relative;
-  padding: 0px 55px 70px 55px !important;
-  overflow: hidden;
-  background: none !important;
+  padding: 0px 95px 70px 95px;
+  margin: 0px 20px;
+  background: none;
   &::before {
     content: "";
     position: absolute;
@@ -252,13 +282,14 @@
   }
   @media (min-width: 768px) and (max-width: 1024px)
   {
-    padding: 0px 20px 50px 20px !important;
+    padding: 0px 9% 50px 9%;
+    flex-direction: column;
   }
   @media (min-width: 320px) and (max-width: 767px)
   {
     flex-direction: column;
-    padding: 0px 20px !important;
-    gap: 15px !important;
+    padding: 0px 20px;
+    gap: 15px;
   }
   .edscard-member-cards
   {
@@ -266,11 +297,11 @@
     gap:20px;
   }
   .edscard-custom{
-    padding:0px !important;
-    border-radius: 0px !important;
-    box-shadow: none !important;
-    background: $white !important;
-    text-align: center !important;
+    padding:0px ;
+    border-radius: 0px;
+    box-shadow: none;
+    background: var(--white) ;
+    text-align: center ;
     .edscard-custom-img
     {
       width: 100%;
@@ -278,9 +309,9 @@
     }
     .icon
     {
-      border: 1px solid $iborder;
+      border: 1px solid var(--iborder);
       border-radius: 50%;
-      padding: 3px 7px 11px 7px;
+      padding: 7px 8px 8px 8px;
       margin-right: 8px;
       img
       {
@@ -289,42 +320,52 @@
         @media (min-width: 320px) and (max-width: 767px)
         {
           width: 20px;
-          height: 25px;
+          height: 13px;
         }
       }
     }
     .edscard-custom-cardcontent
     {
       padding: 10px 0px 30px 0px;
+      p{
+        display: flex;
+        justify-content: center;
+      }
+      h3{
+        @media (min-width: 768px) and (max-width: 1024px)
+        {
+          font-size: calc(var(--font) + 15px);
+        }
+      }
     }
   }
 }
 .choose
 {
-  padding:40px 55px !important;
+  padding:40px 55px 0px 55px;
   @media (min-width: 320px) and (max-width: 767px)
   {
     flex-direction: column;
-    padding: 0px 20px !important;
-    gap: 15px !important;
+    padding: 0px 20px ;
+    gap: 15px ;
   }
   @media (min-width: 768px) and (max-width: 1024px)
   {
-    padding: 20px 20px 20px 20px !important;
-    gap:15px !important;
+    padding: 20px 20px 20px 20px;
+    gap:15px ;
     flex-wrap: wrap;
   }
   .edscard-custom{
     display: flex;
     align-items: center;
-    padding:0px 70px 10px 70px!important;
+    padding:0px 70px 10px 70px;
     @media (min-width: 320px) and (max-width: 767px)
     {
-      padding:0px 20px !important;
+      padding:0px 20px ;
     }
     @media (min-width: 768px) and (max-width: 1024px)
     {
-      padding: 0px 20px 0px 20px !important;
+      padding: 0px 20px 0px 20px ;
     }
     .icon
     {
@@ -332,7 +373,7 @@
       height:50px;
       margin-right: 10px;
       border-radius: 50%;
-      background: $white;
+      background: var(--white);
       padding: 10px 8px 10px 10px;
       img
       {
@@ -342,11 +383,11 @@
     }
     &:hover
     {
-      background: $bluecol;
+      background: var(--bluecol);
       transition: all .3s ease;
       .edscard-custom-cardtitle,.edscard-custom-description
       {
-        color:$white;
+        color: var(--white);
       }
       
     }
@@ -354,17 +395,17 @@
 }
 .process
 {
-  padding: 40px 55px !important;
+  padding: 10px 55px 0px 55px;
   @media (min-width: 320px) and (max-width: 767px)
   {
     flex-direction: column;
-    padding: 0px 20px !important;
-    gap: 15px !important;
+    padding: 0px 20px ;
+    gap: 15px ;
   }
   @media (min-width: 768px) and (max-width: 1024px)
   {
-    padding: 20px 20px 20px 20px !important;
-    gap:15px !important;
+    padding: 20px 20px 20px 20px ;
+    gap:15px ;
     flex-wrap: wrap;
   }
   .edscard-custom
@@ -372,15 +413,15 @@
     display: flex;
     align-items: center;
     flex-direction: column;
-    padding: 30px 35px !important;
+    padding: 30px 45px ;
     box-shadow: none !important;
     @media (min-width: 320px) and (max-width: 767px)
     {
-      padding: 10px 20px !important;
+      padding: 10px 20px;
     }
     @media (min-width: 768px) and (max-width: 1024px)
     {
-      padding: 20px 20px 20px 20px !important;
+      padding: 20px 20px 20px 20px ;
       width: 200px;
     }
     &-cardcontent
@@ -391,7 +432,7 @@
     {
       border-radius: 50%;
       width: 95px;
-      background: $bluecol;
+      background: var(--bluecol);
       height: 95px;
       display: flex;
       align-items: center;
